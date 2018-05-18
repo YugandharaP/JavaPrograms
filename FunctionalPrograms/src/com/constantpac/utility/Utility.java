@@ -45,6 +45,12 @@ public class Utility {
 		return scn.nextBoolean();
 	}
 
+	/**
+	 * @return
+	 */
+	public static long readLong() {
+		return scn.nextLong();
+	}
 	/*
 	 * this function replace the template string with user input name
 	 * 
@@ -281,14 +287,20 @@ public class Utility {
 		if(delta>0) {
 			root1Ofx=(-(numSecond) + Math.sqrt(delta))/(2*numFirst);
 			root2Ofx=(-(numSecond) - Math.sqrt(delta))/(2*numFirst);
-			System.out.println("root-1 of 'x'"+root1Ofx);
-			System.out.println("root-2 of 'x'"+root2Ofx);
+			System.out.println("root-1 of 'x' = "+root1Ofx);
+			System.out.println("root-2 of 'x' = "+root2Ofx);
 		}
 		else if(delta<0)
 		{
-			System.out.println("root 1 of x:is the real part"+(-numSecond)/(2*numFirst));
-			System.out.println("root 1 of x:is the imaginary part"+Math.sqrt((-delta)/(2*numFirst)));
+			System.out.println("root 1 of x:is the real part = "+(-numSecond)/(2*numFirst));
+			System.out.println("root 1 of x:is the imaginary part = "+Math.sqrt((-delta)/(2*numFirst)));
+		}
+		else
+		{
+			System.out.println("root-1 of 'x' and root-2 of 'x' = "+(-numSecond)/(2*numFirst));
 		}
 		
 	}
+
+	
 }

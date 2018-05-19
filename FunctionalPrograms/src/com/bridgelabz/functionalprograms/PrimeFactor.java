@@ -2,7 +2,7 @@ package com.bridgelabz.functionalprograms;
 
 import java.util.HashSet;
 
-import com.constantpac.utility.Utility;
+import com.bridgelabz.utility.Utility;
 
 /*
  Purpose: Computes the prime factorization for given number.

@@ -1,6 +1,6 @@
 package com.bridgelabz.functionalprograms;
 
-import com.constantpac.utility.Utility;
+import com.bridgelabz.utility.Utility;
 
 /**
  * purpose-this class to calculate Euclidean distance from the point (x, y) to the origin (0, 0)

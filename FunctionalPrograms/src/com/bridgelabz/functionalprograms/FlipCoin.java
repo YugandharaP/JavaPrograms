@@ -1,7 +1,7 @@
 package com.bridgelabz.functionalprograms;
 
 import java.util.Scanner;
-import com.constantpac.utility.Utility;
+import com.bridgelabz.utility.Utility;
 
 public class FlipCoin {
 	static double HEAD;

@@ -1,12 +1,12 @@
 
-package com.constantpac.utility;
+package com.bridgelabz.utility;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import com.constantpac.*;
+
 
 /**
  * @author adminsitrator
@@ -275,32 +275,20 @@ public class Utility {
 		System.out.println("National Weather Service defines the effective temperature the wind chill to be: "+weather);
 	}
 
-	/**
-	 * @param numFirst
-	 * @param numSecond
-	 * @param numThird
+	/**this function check the number is prime or not
+	 * @param num-which is to be check
+	 * @return true or false after checking prime number
 	 */
-	public static void findRoots(int numFirst, int numSecond, int numThird) {
-		double delta=(numSecond*numSecond)-(4*numFirst*numThird);
-		double root1Ofx=0;
-		double root2Ofx=0;
-		if(delta>0) {
-			root1Ofx=(-(numSecond) + Math.sqrt(delta))/(2*numFirst);
-			root2Ofx=(-(numSecond) - Math.sqrt(delta))/(2*numFirst);
-			System.out.println("root-1 of 'x' = "+root1Ofx);
-			System.out.println("root-2 of 'x' = "+root2Ofx);
-		}
-		else if(delta<0)
+	public static boolean isPrime(int num) {
+		if(num==2)return true;
+		else if(num%2==0)
 		{
-			System.out.println("root 1 of x:is the real part = "+(-numSecond)/(2*numFirst));
-			System.out.println("root 1 of x:is the imaginary part = "+Math.sqrt((-delta)/(2*numFirst)));
+			return false;
 		}
 		else
-		{
-			System.out.println("root-1 of 'x' and root-2 of 'x' = "+(-numSecond)/(2*numFirst));
-		}
-		
+		return true;
 	}
 
+	
 	
 }

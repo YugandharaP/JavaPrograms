@@ -1,7 +1,3 @@
-package com.bridgelabz.functionalprograms;
-
-import com.constantpac.utility.Utility;
-
 /*
 	 * purpose-
 	 * 
@@ -9,6 +5,11 @@ import com.constantpac.utility.Utility;
 	 * @version 1.0
 	 * @since 18-05-2018
 	 */
+package com.bridgelabz.functionalprograms;
+
+import com.bridgelabz.utility.Utility;
+
+
 public class WindChill {
 		public static void main(String[] args) {
 			double temparature = Double.parseDouble(args[0]);

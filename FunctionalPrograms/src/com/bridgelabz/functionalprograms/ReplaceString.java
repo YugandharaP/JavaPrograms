@@ -1,6 +1,6 @@
 package com.bridgelabz.functionalprograms;
 
-import com.constantpac.utility.Utility;
+import com.bridgelabz.utility.Utility;
 
 public class ReplaceString {
 

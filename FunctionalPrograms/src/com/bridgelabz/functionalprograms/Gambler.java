@@ -1,6 +1,6 @@
 package com.bridgelabz.functionalprograms;
 
-import com.constantpac.utility.Utility;
+import com.bridgelabz.utility.Utility;
 
 /*
 Purpose: Simulates a gambler who start with $stake and place fair $1 bets until he/she goes broke (i.e. has no money) or reach $goal.

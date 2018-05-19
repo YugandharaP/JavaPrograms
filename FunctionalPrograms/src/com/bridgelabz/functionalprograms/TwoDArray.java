@@ -1,6 +1,3 @@
-package com.bridgelabz.functionalprograms;
-
-import com.constantpac.utility.Utility;
 
 /*
  * purpose-2D arrays of integers and doubles from standard input and printing them out to standard output.
@@ -8,6 +5,11 @@ import com.constantpac.utility.Utility;
  *@version 1.0
  *@since   17-05-2018
  */
+package com.bridgelabz.functionalprograms;
+
+import com.bridgelabz.utility.Utility;
+
+
 public class TwoDArray {
 
 	public static void main(String[] args) {

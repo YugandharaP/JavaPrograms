@@ -13,9 +13,7 @@ public class Anagram {
 
 	/**
 	 * this function remove the spaces between the string_characters
-	 * 
-	 * @param string
-	 *            its taking the both strings to remove spaces
+	 * @param string its taking the both strings to remove spaces
 	 * @return modified string
 	 */
 	private static String removeSpace(String string) {
@@ -30,23 +28,13 @@ public class Anagram {
 
 	/**
 	 * this function sort the string alphabetically using bubble sort algorithm
-	 * 
-	 * @param string
-	 *            - the string to be sort
+	 * @param string -the string to be sort
 	 * @return temp- sorted string
 	 */
 	public static String sort(String string) {
 		char[] arr = string.toCharArray();
 		String temp = "";
-		for (int i = 0; i < arr.length - 1; i++) {
-			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[i] > arr[j]) {
-					char empty = arr[i];
-					arr[i] = arr[j];
-					arr[j] = empty;
-				}
-			}
-		}
+		Utility.bubbleSortForCharacter(arr);
 		for (int i = 0; i < arr.length; i++) {
 			temp += arr[i];
 		}

@@ -2,11 +2,11 @@
 package com.bridgelabz.utility;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-
 
 /**
  * @author adminsitrator
@@ -51,6 +51,7 @@ public class Utility {
 	public static long readLong() {
 		return scn.nextLong();
 	}
+
 	/*
 	 * this function replace the template string with user input name
 	 * 
@@ -228,10 +229,12 @@ public class Utility {
 
 	}
 
-	
 	/**
 	 * this function generate random number until we get distinct coupon number
-	 * @param couponNumber is to take the value for how many digits distinct coupon number he want
+	 * 
+	 * @param couponNumber
+	 *            is to take the value for how many digits distinct coupon number he
+	 *            want
 	 * @return count value that how many times random number generated
 	 */
 	public static int couponGenerator(int couponNumber) {
@@ -243,21 +246,25 @@ public class Utility {
 		while (couponNumber > index) {
 			distinctValue = random.nextInt(10);
 			count++;
-				if (list.contains(distinctValue)) {
-					continue;
-					
-				} else
-					list.add(distinctValue);
-					index++;
-					
+			if (list.contains(distinctValue)) {
+				continue;
+
+			} else
+				list.add(distinctValue);
+			index++;
+
 		}
 		return count;
 	}
 
 	/**
-	 * this function calculate euclideanDistance using the inbuild function math.pow() and math.sqrt()
-	 * @param firstNumber for first value
-	 * @param secondNumber for second value
+	 * this function calculate euclideanDistance using the inbuild function
+	 * math.pow() and math.sqrt()
+	 * 
+	 * @param firstNumber
+	 *            for first value
+	 * @param secondNumber
+	 *            for second value
 	 */
 	public static void euclideanDistance(int firstNumber, int secondNumber) {
 		double distance = 0;
@@ -265,30 +272,184 @@ public class Utility {
 		System.out.println("the EuclideanDistance between " + firstNumber + " and " + secondNumber + " is " + distance);
 	}
 
-	/** 
+	/**
 	 * this function is find the weather temparature is to be windchill
+	 * 
 	 * @param temparature
 	 * @param speed
 	 */
 	public static void calculateWindChill(double temparature, double speed) {
-		double weather= 35.74 + (0.6215 * temparature) + ((0.4275*temparature - 35.75)*Math.pow(speed, 0.16)) ;
-		System.out.println("National Weather Service defines the effective temperature the wind chill to be: "+weather);
+		double weather = 35.74 + (0.6215 * temparature) + ((0.4275 * temparature - 35.75) * Math.pow(speed, 0.16));
+		System.out
+				.println("National Weather Service defines the effective temperature the wind chill to be: " + weather);
 	}
 
-	/**this function check the number is prime or not
-	 * @param num-which is to be check
+	/**
+	 * this function check the number is prime or not
+	 * 
+	 * @param num-which
+	 *            is to be check
 	 * @return true or false after checking prime number
 	 */
 	public static boolean isPrime(int num) {
-		if(num==2)return true;
-		else if(num%2==0)
+		if (num == 2)
+			return true;
+		for(int i=2;i<num;i++) 
 		{
-			return false;
+			if(num%i!=0)
+			{
+				return true;
+			}
 		}
-		else
-		return true;
+		return false;
 	}
 
+	/**
+	 * Bubble method to sort elements of integer type
+	 * 
+	 * @param array-taking
+	 *            array to which sort
+	 */
+	public static void bubbleSortForInteger(int[] array) {
+		for (int i = 0; i < array.length - 1; i++) {
+			for (int j = i + 1; j < array.length; j++) {
+				if (array[i] > array[j]) {
+					int temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
+				}
+			}
+		}
+	}
+
+	/**
+	 * Bubble method to sort elements of Character type type
+	 * 
+	 * @param array-taking
+	 *            array to which sort
+	 */
+	public static void bubbleSortForCharacter(char[] arr) {
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i] > arr[j]) {
+					char empty = arr[i];
+					arr[i] = arr[j];
+					arr[j] = empty;
+				}
+			}
+		}
+	}
+
+	/**
+	 * This function sort the string at the time of insertion
+	 * 
+	 * @param array-take
+	 *            unsorted array
+	 * @return array-return sorted array
+	 */
+	public static String[] insertionSortOfStrings(String[] array) {
+		for (int i = 1; i < array.length; i++) {
+			String peak = array[i];
+			int temp = i - 1;
+			while (temp >= 0 && peak.compareToIgnoreCase(array[temp]) < 0) {
+				array[temp + 1] = array[temp];
+				temp--;
+			}
+			array[temp + 1] = peak;
+
+		}
+		return array;
+	}
+
+	/**
+	 * This function sort the string at the time of insertion
+	 * 
+	 * @param array-take
+	 *            unsorted array
+	 * @return array-return sorted array
+	 */
+	public static int[] insertionSortOfInteger(int[] array) {
+		for (int i = 1; i < array.length; i++) {
+			int peak = array[i];
+			int temp = i - 1;
+			while ((temp >= 0) && (array[temp] > peak)) {
+				array[temp + 1] = array[temp];
+				temp--;
+			}
+			array[temp + 1] = peak;
+		}
+		return array;
+	}
+
+	/**This function search the Integers based on users demand
+	 * @param array
+	 * @param element index
+	 */
+	public static int binarySearchForInteger(int[] array, int searchWord) {
+		int low = 0;
+		int high = array.length - 1;
+		int mid=0;
+		while (low <= high) {
+			mid = (low + high) / 2;
+			if (array[mid]<searchWord) {
+				low = mid + 1;
+				
+			} else if (array[mid]>searchWord) {
+				high = mid - 1;
+			} else 
+			{
+				return mid;
+			}
+		}
+		return -1;
+	}
 	
-	
+	/**This function search the Strings based on users demand
+	 * @param array,searchWord
+	 * @param word index 
+	 */
+	public static int binarySearchForStrings(String[] array, String searchWord) {
+		int low = 0;
+		int high = array.length - 1;
+		int mid=0;
+		while (low <= high) {
+			mid = (low + high) / 2;
+			if (array[mid].compareToIgnoreCase(searchWord)>0) {
+				low = mid + 1;
+			} else if (array[mid].compareToIgnoreCase(searchWord)<0) {
+				high = mid - 1;
+			} else 
+			{
+				return mid;
+			}
+		}
+		return -1;
+	}
+
+	/**
+	 * this function calculate elapsed time between start and stop watch
+	 */
+	public static void stopWatch() {
+		System.out.println("Enter 0 for start the stopwatch");
+		int input = Utility.reInteger();
+		long startTime = 0;  //store startTime
+		long stopTime = 0;	//store stopTime
+		int flag = 0;
+		while (flag == 0) {
+			switch (input) {
+			case 0:
+				startTime = System.nanoTime();  //nonoTime() is measuerd current time of system
+				System.out.println("Enter 1 to stop the stopWatch");
+				input = Utility.reInteger();
+				break;
+			case 1:
+				stopTime = System.nanoTime();
+				flag = 1;
+			}
+		}
+		System.out.println("Start Time = " + startTime);
+		System.out.println("Stop Time = " + stopTime);
+		System.out.println("Elapsed Time = " + (stopTime - startTime) + " ns");		
+	}
+
 }

@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class Utility {
 
 	static Scanner scn = new Scanner(System.in);
-
 	// For Inputting a only one String
 	public static String retNext() {
 		return scn.next();
@@ -34,7 +33,7 @@ public class Utility {
 	/**
 	 * @return double number
 	 */
-	private static double readDouble() {
+	public static double readDouble() {
 		return scn.nextDouble();
 	}
 
@@ -292,16 +291,12 @@ public class Utility {
 	 * @return true or false after checking prime number
 	 */
 	public static boolean isPrime(int num) {
-		if (num == 2)
-			return true;
-		for(int i=2;i<num;i++) 
+		for(int i=2;i<=num/2;i++)
 		{
-			if(num%i!=0)
-			{
-				return true;
-			}
+		if (num%i == 0)
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 	/**
@@ -340,6 +335,21 @@ public class Utility {
 		}
 	}
 
+	/**
+	 * this function sort the string alphabetically using bubble sort algorithm
+	 * @param string -the string to be sort
+	 * @return temp- sorted string
+	 */
+	public static String sort(String string) {
+		char[] arr = string.toCharArray();
+		String temp = "";
+		Utility.bubbleSortForCharacter(arr);
+		for (int i = 0; i < arr.length; i++) {
+			temp += arr[i];
+		}
+		return temp;
+	}
+	
 	/**
 	 * This function sort the string at the time of insertion
 	 * 
@@ -450,6 +460,10 @@ public class Utility {
 		System.out.println("Start Time = " + startTime);
 		System.out.println("Stop Time = " + stopTime);
 		System.out.println("Elapsed Time = " + (stopTime - startTime) + " ns");		
+	}
+
+	public static void readArray(int input) {
+		
 	}
 
 }

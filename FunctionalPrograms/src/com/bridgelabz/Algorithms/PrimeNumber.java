@@ -1,18 +1,23 @@
+/*****************************************************************************************************************************
+ *purpose-to check Numbers are prime number or not within the given range
+ *@author  Yuga
+ *@version 1.0
+ *@since   21-05-2018
+ ****************************************************************************************************************************/
+
 package com.bridgelabz.Algorithms;
 
 import com.bridgelabz.utility.Utility;
 
 public class PrimeNumber {
-
+	public	static String storage = "";
 	public static void main(String[] args) {
-		String result="";
-		for(int number=2;number<=1000;number++)
-		{
-			if(Utility.isPrime(number)==true)
-			{
-				result+=number+" ";
+		
+		for (int num = 2; num <= 1000; num++) {
+			if (Utility.isPrime(num)) {
+				storage += num + " ";
 			}
 		}
-		System.out.println("Prime numbers between 0-1000 are : \n "+result);
+		System.out.println("Prime numbers between 0-1000 are : \n "+storage);
 	}
 }

@@ -25,22 +25,6 @@ public class Anagram {
 		}
 		return temp;
 	}
-
-	/**
-	 * this function sort the string alphabetically using bubble sort algorithm
-	 * @param string -the string to be sort
-	 * @return temp- sorted string
-	 */
-	public static String sort(String string) {
-		char[] arr = string.toCharArray();
-		String temp = "";
-		Utility.bubbleSortForCharacter(arr);
-		for (int i = 0; i < arr.length; i++) {
-			temp += arr[i];
-		}
-		return temp;
-	}
-
 	public static void main(String[] args) {
 		System.out.println("Enter first String: ");
 		String string1 = Utility.retNextLine();
@@ -54,8 +38,8 @@ public class Anagram {
 		if (string1.length() == string2.length()) {
 			string1 = string1.toLowerCase();
 			string2 = string2.toLowerCase();
-			string1 = sort(string1);
-			string2 = sort(string2);
+			string1 = Utility.sort(string1);
+			string2 = Utility.sort(string2);
 			// two strings are compare using equals method of Object class
 			if (string1.equals(string2)) {
 				System.out.println("Strings are Anagram");

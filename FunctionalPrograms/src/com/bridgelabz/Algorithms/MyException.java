@@ -1,3 +1,8 @@
+/**This is created to user defined exception
+ * @author Yuga
+ *@version 1.0
+ *@since   21-05-2018
+ */
 package com.bridgelabz.Algorithms;
 
 public class MyException extends Exception {

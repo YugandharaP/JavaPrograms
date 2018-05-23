@@ -1,4 +1,8 @@
-
+/**purpose-this contain multiple methods which will call  many time in multiple program.
+ * @author Yuga
+ *@version 1.0
+ *@since   17-05-2018
+ */
 package com.bridgelabz.utility;
 
 import java.util.ArrayList;
@@ -7,25 +11,29 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import com.bridgelabz.Algorithms.MyException;
 
-/**
- * @author adminsitrator
- *
- */
 public class Utility {
 
 	static Scanner scn = new Scanner(System.in);
-	// For Inputting a only one String
+
+	/**
+	 * @return single String number
+	 */
 	public static String retNext() {
 		return scn.next();
 	}
 
-	// For Inputting multiple Strings
+	/**
+	 * @return Multiple String number
+	 */
 	public static String retNextLine() {
 		return scn.nextLine();
 	}
 
-	// For Inputting Integer
+	/**
+	 * @return Integer number
+	 */
 	public static int reInteger() {
 		return scn.nextInt();
 	}
@@ -40,12 +48,12 @@ public class Utility {
 	/**
 	 * @return boolean number
 	 */
-	private static boolean readBoolean() {
+	public static boolean readBoolean() {
 		return scn.nextBoolean();
 	}
 
 	/**
-	 * @return
+	 * @return long number
 	 */
 	public static long readLong() {
 		return scn.nextLong();
@@ -85,14 +93,11 @@ public class Utility {
 				return false;
 		} else
 			return false;
-
 	}
 
 	/*
 	 * This function is print to the prime factor of user input number
-	 * 
 	 * @param number-to take number ,which we have to find prime factors
-	 * 
 	 * @return HashSet to gives unique prime factors
 	 */
 
@@ -116,17 +121,14 @@ public class Utility {
 
 	/*
 	 * This function for gambling or betting which to find user will loose or win
-	 * 
 	 * @param number-to takes numbers from user for set goal,amount and timeOfNumber
 	 * Print the result for win or loss percentage and number of time win out of
 	 * total chances
 	 */
 	public static void isWinOrLoss(int $stake, int $goal, int noOfTimes) {
-
 		int win = 0;
 		int loss = 0;
-
-		for (int i = 0; i <= noOfTimes; i++) {
+		for (int i = 0; i < noOfTimes; i++) {
 			while ($stake > 0 && $stake < $goal) {
 				if (Math.random() > 0.5) {
 					$stake += 1;// win $1
@@ -151,15 +153,11 @@ public class Utility {
 	/**
 	 * this function for 2D arrays of integers and doubles and boolean from standard
 	 * input and printing them out to standard output.
-	 * 
-	 * @param number
-	 *            to take input number to choose the options
+	 * @param number -to take input number to choose the options
 	 */
 	public static void twoDArray(int input) {
-
 		switch (input) {
 		case 1:
-
 			System.out.println("Enter Number of rows");
 			int rows = Utility.reInteger();
 			System.out.println("Enter Number of columns");
@@ -171,18 +169,15 @@ public class Utility {
 					arrayInt[i][j] = reInteger();
 				}
 			}
-
 			for (int i = 0; i < rows; i++) {
 				for (int j = 0; j < colmn; j++) {
 					System.out.print(arrayInt[i][j] + " ");
 				}
 				System.out.println();
 			}
-
 			break;
 
 		case 2:
-
 			System.out.println("Enter Number of rows");
 			int rowsD = Utility.reInteger();
 			System.out.println("Enter Number of colmn");
@@ -194,7 +189,6 @@ public class Utility {
 					arrayDouble[i][j] = readDouble();
 				}
 			}
-
 			for (int i = 0; i < rowsD; i++) {
 				for (int j = 0; j < colmnD; j++) {
 					System.out.println(arrayDouble[i][j] + " ");
@@ -202,7 +196,6 @@ public class Utility {
 				System.out.println();
 			}
 			break;
-
 		case 3:
 			System.out.println("Enter Number of rows");
 			int rowsB = Utility.reInteger();
@@ -225,15 +218,11 @@ public class Utility {
 		default:
 			System.out.println("wrong input !");
 		}
-
 	}
 
 	/**
 	 * this function generate random number until we get distinct coupon number
-	 * 
-	 * @param couponNumber
-	 *            is to take the value for how many digits distinct coupon number he
-	 *            want
+	 * @param couponNumber is to take the value for how many digits distinct coupon number he want
 	 * @return count value that how many times random number generated
 	 */
 	public static int couponGenerator(int couponNumber) {
@@ -247,23 +236,17 @@ public class Utility {
 			count++;
 			if (list.contains(distinctValue)) {
 				continue;
-
 			} else
 				list.add(distinctValue);
 			index++;
-
 		}
 		return count;
 	}
 
 	/**
-	 * this function calculate euclideanDistance using the inbuild function
-	 * math.pow() and math.sqrt()
-	 * 
-	 * @param firstNumber
-	 *            for first value
-	 * @param secondNumber
-	 *            for second value
+	 * this function calculate euclideanDistance using the inbuild function  math.pow() and math.sqrt()
+	 * @param firstNumber for first value
+	 * @param secondNumber for second value
 	 */
 	public static void euclideanDistance(int firstNumber, int secondNumber) {
 		double distance = 0;
@@ -273,43 +256,36 @@ public class Utility {
 
 	/**
 	 * this function is find the weather temparature is to be windchill
-	 * 
 	 * @param temparature
 	 * @param speed
 	 */
 	public static void calculateWindChill(double temparature, double speed) {
 		double weather = 35.74 + (0.6215 * temparature) + ((0.4275 * temparature - 35.75) * Math.pow(speed, 0.16));
-		System.out
-				.println("National Weather Service defines the effective temperature the wind chill to be: " + weather);
+		System.out.println("National Weather Service defines the effective temperature the wind chill to be: " + weather);
 	}
 
 	/**
 	 * this function check the number is prime or not
-	 * 
-	 * @param num-which
-	 *            is to be check
+	 * @param num-which is to be check
 	 * @return true or false after checking prime number
 	 */
 	public static boolean isPrime(int num) {
-		for(int i=2;i<=num/2;i++)
-		{
-		if (num%i == 0)
-			return false;
+		for (int i = 2; i <= num / 2; i++) {
+			if (num % i == 0)
+				return false;
 		}
 		return true;
 	}
 
 	/**
 	 * Bubble method to sort elements of integer type
-	 * 
-	 * @param array-taking
-	 *            array to which sort
+	 * @param array-taking array to which sort
 	 */
-	public static void bubbleSortForInteger(int[] array) {
+	public static <T extends Comparable<T>> void bubbleSortForInteger(T[] array) {
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = i + 1; j < array.length; j++) {
-				if (array[i] > array[j]) {
-					int temp = array[i];
+				if (array[i].compareTo(array[j])>0) {
+					T temp = array[i];
 					array[i] = array[j];
 					array[j] = temp;
 				}
@@ -319,10 +295,8 @@ public class Utility {
 
 	/**
 	 * Bubble method to sort elements of Character type type
-	 * 
-	 * @param array-taking
-	 *            array to which sort
-	 */
+	 * @param array-taking array to which sort
+	 *//*
 	public static void bubbleSortForCharacter(char[] arr) {
 		for (int i = 0; i < arr.length - 1; i++) {
 			for (int j = i + 1; j < arr.length; j++) {
@@ -333,28 +307,26 @@ public class Utility {
 				}
 			}
 		}
-	}
+	}*/
 
 	/**
 	 * this function sort the string alphabetically using bubble sort algorithm
 	 * @param string -the string to be sort
 	 * @return temp- sorted string
 	 */
-	public static String sort(String string) {
-		char[] arr = string.toCharArray();
-		String temp = "";
-		Utility.bubbleSortForCharacter(arr);
-		for (int i = 0; i < arr.length; i++) {
-			temp += arr[i];
-		}
-		return temp;
-	}
-	
+//	public static String sort(String string) {
+//		char[] arr = string.toCharArray();
+//		String temp = "";
+//		Utility.bubbleSortForCharacter(arr);
+//		for (int i = 0; i < arr.length; i++) {
+//			temp += arr[i];
+//		}
+//		return temp;
+//	}
+
 	/**
 	 * This function sort the string at the time of insertion
-	 * 
-	 * @param array-take
-	 *            unsorted array
+	 * @param array-take unsorted array
 	 * @return array-return sorted array
 	 */
 	public static String[] insertionSortOfStrings(String[] array) {
@@ -373,9 +345,7 @@ public class Utility {
 
 	/**
 	 * This function sort the string at the time of insertion
-	 * 
-	 * @param array-take
-	 *            unsorted array
+	 * @param array-unsorted array
 	 * @return array-return sorted array
 	 */
 	public static int[] insertionSortOfInteger(int[] array) {
@@ -391,45 +361,47 @@ public class Utility {
 		return array;
 	}
 
-	/**This function search the Integers based on users demand
+	/**
+	 * This function search the Integers based on users demand
 	 * @param array
 	 * @param element index
 	 */
 	public static int binarySearchForInteger(int[] array, int searchWord) {
 		int low = 0;
 		int high = array.length - 1;
-		int mid=0;
+		int mid = 0;
 		while (low <= high) {
 			mid = (low + high) / 2;
-			if (array[mid]<searchWord) {
+			if (array[mid] < searchWord) {
 				low = mid + 1;
-				
-			} else if (array[mid]>searchWord) {
+
+			} else if (array[mid] > searchWord) {
 				high = mid - 1;
-			} else 
-			{
+			} else {
 				return mid;
 			}
 		}
 		return -1;
 	}
-	
-	/**This function search the Strings based on users demand
+
+	/**
+	 * This function search the Strings based on users demand
+	 * 
 	 * @param array,searchWord
-	 * @param word index 
+	 * @param word
+	 *            index
 	 */
 	public static int binarySearchForStrings(String[] array, String searchWord) {
 		int low = 0;
 		int high = array.length - 1;
-		int mid=0;
+		int mid = 0;
 		while (low <= high) {
 			mid = (low + high) / 2;
-			if (array[mid].compareToIgnoreCase(searchWord)>0) {
+			if (array[mid].compareToIgnoreCase(searchWord) < 0) {
 				low = mid + 1;
-			} else if (array[mid].compareToIgnoreCase(searchWord)<0) {
+			} else if (array[mid].compareToIgnoreCase(searchWord) > 0) {
 				high = mid - 1;
-			} else 
-			{
+			} else {
 				return mid;
 			}
 		}
@@ -442,13 +414,13 @@ public class Utility {
 	public static void stopWatch() {
 		System.out.println("Enter 0 for start the stopwatch");
 		int input = Utility.reInteger();
-		long startTime = 0;  //store startTime
-		long stopTime = 0;	//store stopTime
+		long startTime = 0; // store startTime
+		long stopTime = 0; // store stopTime
 		int flag = 0;
 		while (flag == 0) {
 			switch (input) {
 			case 0:
-				startTime = System.nanoTime();  //nonoTime() is measuerd current time of system
+				startTime = System.nanoTime(); // nonoTime() is measuerd current time of system
 				System.out.println("Enter 1 to stop the stopWatch");
 				input = Utility.reInteger();
 				break;
@@ -459,11 +431,183 @@ public class Utility {
 		}
 		System.out.println("Start Time = " + startTime);
 		System.out.println("Stop Time = " + stopTime);
-		System.out.println("Elapsed Time = " + (stopTime - startTime) + " ns");		
+		System.out.println("Elapsed Time = " + (stopTime - startTime) + " ns");
 	}
 
-	public static void readArray(int input) {
+	/**
+	 * this function calculate minimum notes of given money using recursion
+	 */
+	public static int calculatingNotes(int money, int index) {
+		int[] notes = { 1000, 500, 100, 50, 20, 10, 5, 2, 1 };
+		int noteCount = 0;
+		if (money == 0) {
+			return -1;
+		} else {
+			if (money >= notes[index]) {
+				noteCount = money / notes[index];
+				int rem = money % notes[index];
+				money = rem;
+				System.out.println(notes[index] + "notes = " + noteCount);
+			} else
+				index++;
+			calculatingNotes(money, index);
+		}
+		return 0;
+	}
+
+	/** Calculate year month and day and return back the day number */
+	public static int dayOfWeek(int month, int day, int year) {
+		System.out.println("entered date is " + month + "/" + day + "/" + year);
+		int y0 = year - (14 - month) / 12;
+		int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
+		int m0 = month + 12 * ((14 - month) / 12) - 2;
+		int d0 = (day + x + 31 * m0 / 12) % 7;
+		return d0;
+	}
+
+	/** This function check input date is valid or not */
+	public static boolean isValidDate(int month, int date, int year) {
+		if (month < 1 || month > 12)
+			return false;
+		if (date < 1 || date > 31)
+			return false;
+		if (month == 2) {
+			if (Utility.isLeapYear(year))
+				return (date <= 29);
+			else
+				return (date <= 28);
+		}
+		if (month == 4 || month == 6 || month == 9 || month == 11)
+			return (date <= 30);
+		return true;
+	}
+
+	/**This function divide the array elements into single cell
+	 */
+	public static void mergeSort(String[] array, int low, int high) {
+		int mid;
+		if (low < high) {
+			mid = (low + high) / 2;
+			mergeSort(array, low, mid);
+			mergeSort(array, mid + 1, high);
+			merge(array, low, mid, high);
+		}
+	}
+	/**This function merge the array after comparing the strings
+	 */
+	public static void merge(String array[], int low, int mid, int high) {
+		int i, mid1, k = 0, low1;
+		String[] temp = new String[50];
+		low1 = low;
+		i = low;
+		mid1 = mid + 1;
+		while ((low1 <= mid) && (mid1 <= high)) {
+			if (array[low1].compareToIgnoreCase(array[mid1]) <= 0) {
+				temp[i] = array[low1];
+				low1++;
+			} else {
+				temp[i] = array[mid1];
+				mid1++;
+			}
+			i++;
+		}
+		if (low1 > mid) {
+			for (k = mid1; k <= high; k++) {
+				temp[i] = array[k];
+				i++;
+			}
+		} else {
+			for (k = low1; k <= mid; k++) {
+				temp[i] = array[k];
+				i++;
+			}
+		}
+		for (k = low; k <= high; k++) {
+			array[k] = temp[k];
+		}
+	}
+
+	/**this function convert decimal to binary
+	 * @param decimalNum-take decimal number
+	 */
+	public static String toBinary(int decimalNum) {
+		String remainder="";
+		String binary="";
+		int length=0;
+		while(decimalNum>0)
+		{
+			remainder+=decimalNum%2;
+			decimalNum/=2;
+		}
+		length=checklength(remainder);
 		
+		for(int i=0;i<length;i++)
+		{
+			remainder+='0';
+		}
+		for(int i=remainder.length()-1;i>=0;i--)
+		{
+			binary+=remainder.charAt(i);
+		}
+		return binary;
 	}
 
-}
+	/**this function check the length and return the length
+	 * @param remainder
+	 * @return length
+	 */
+	private static int checklength(String remainder) {
+		int length=0;
+		 if(remainder.length()>0 && remainder.length()<8) 
+		return length=8-remainder.length();
+		return length;
+	}
+
+	/**This function swap old binary nibble and return new binary number
+	 */
+	public static String swapNibble(String binary) {
+		int length=binary.length();
+		String nibble1="";
+		String nibble2="";
+		String newBinary="";
+		for(int i=0;i<length/2;i++)
+		{
+			nibble1+=binary.charAt(i);
+			//System.out.println(nibble1);
+		}
+		for(int i=length/2;i<length;i++)
+		{
+			nibble2+=binary.charAt(i);
+			//System.out.println(nibble2);
+		}
+		String temp=nibble1;nibble1=nibble2;nibble2=temp;
+		newBinary=nibble1+nibble2;
+		return newBinary;
+	}
+
+	/**
+	 * this function convert binary number to decimal number
+	 */
+	public static int toDecimal(String newBinary) {
+		int length=newBinary.length();
+		int newDecimal=0;int index=0;
+		for(int i= length-1;i>=0;i--)
+		{
+			if(newBinary.charAt(i)=='1')
+			{
+				newDecimal+=(int) checkPower(index);
+			}
+			index++;
+		}
+		return newDecimal;
+	}
+
+	/**
+	 * this function calculate  the power of two and return
+	 */
+	private static double checkPower(int index) {
+		double temp=Math.pow(2, index);
+		return temp;
+	}
+	
+	}	

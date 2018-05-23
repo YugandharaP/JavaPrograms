@@ -1,3 +1,8 @@
+/**This is find the root of number using newton method
+ * @author Yuga
+ *@version 1.0
+ *@since   21-05-2018
+ */
 package com.bridgelabz.Algorithms;
 
 import com.bridgelabz.utility.Utility;
@@ -23,6 +28,10 @@ public class NewtonMethod {
 		}
 	}
 
+	/**This function calculate the root of number using newton method and return root
+	 * @param number
+	 * @return root
+	 */
 	private static double sqrt(int number) {
 			double t=number;
 			double epsilon=1e-15;

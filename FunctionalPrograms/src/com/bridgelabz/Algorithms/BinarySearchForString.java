@@ -1,3 +1,10 @@
+
+/************************************************************************************************************
+ * purpose-read the file and Search the string index using binary search
+ *@author  Yuga
+ *@version 1.0
+ *@since   22-05-2018
+ **************************************************************************************************************/
 package com.bridgelabz.Algorithms;
 
 import java.io.BufferedReader;
@@ -11,8 +18,6 @@ import java.util.Arrays;
 import com.bridgelabz.utility.Utility;
 
 class BinarySearchForString {
-
-
 	public String[] fileReader() throws IOException {
 		FileReader fileReader = new FileReader("/home/adminsitrator/Documents/JavaProgramming/FunctionalPrograms/src/com/bridgelabz/Algorithms/file1");
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -25,8 +30,13 @@ class BinarySearchForString {
 	        String[] stringArray=bss.fileReader();
 	        System.out.println("Sorting the String first");
 	        Arrays.sort(stringArray);
+			for(int i=0;i<stringArray.length;i++)
+			{
+				System.out.println(stringArray[i]);
+			}
 	        System.out.println("Enter the word you want to search");
 	        String element= Utility.retNextLine();
-	        Utility.binarySearchForStrings(stringArray, element);
+	      System.out.println(Utility.binarySearchForStrings(stringArray, element));
+	        
 	    }
 }

@@ -5,26 +5,32 @@
  *@since   21-05-2018
  **************************************************************************************************************/
 package com.bridgelabz.Algorithms;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.bridgelabz.utility.Utility;
 
 public class BubbleSort {
 
-	public static void main(String[] args) {
+	public static <T> void main(String[] args) {
 		System.out.println("How many elements you want to sort? ");
 		int size = Utility.reInteger();
-		int[] array = new int[size];
-		System.out.println("Enter the Elements: ");
-		for (int i = 0; i < size; i++) {
-			array[i] = Utility.reInteger();
+		Integer[] array = new Integer[size];
+		for(int i=0;i<size;i++)
+		{
+			array[i]=Utility.reInteger();
+		}
+		String[] array1 = new String[size];
+		for(int i=0;i<size;i++)
+		{
+			array1[i]=Utility.retNext();
 		}
 		Utility.bubbleSortForInteger(array);
 		printArray(array);
 	}
 
-	/**Function used to print the array */
-	private static void printArray(int[] array) {
+	//**Function used to print the array *//*
+	private static <T> void printArray(T[] array) {
 		String print="";
 		for(int i=0;i<array.length;i++)
 		{
@@ -32,5 +38,4 @@ public class BubbleSort {
 		}
 		System.out.println("Elements after sort : "+print);
 	}
-
 }

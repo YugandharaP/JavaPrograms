@@ -1,11 +1,16 @@
+/************************************************************************************************************
+ * purpose-sort the Strings using mergesort algorithm
+ *@author  Yuga
+ *@version 1.0
+ *@since   23-05-2018
+ **************************************************************************************************************/
 package com.bridgelabz.Algorithms;
 
 import com.bridgelabz.utility.Utility;
-import com.bridgelabz.utility.UtilityForAlgorithms;
 
 public class MergeSort {
 
-	public static <T> void main(String[] args) {
+	public static  void main(String[] args) {
 		System.out.println("Enter how many elements you want to sort");
 		int input=Utility.reInteger();
 		System.out.println("Enter elements");
@@ -14,10 +19,11 @@ public class MergeSort {
 		{
 			array[i]=Utility.retNext();
 		}
-		UtilityForAlgorithms.mergeSort(array);
-		
+		Utility.mergeSort(array,0,array.length-1);
+		//printing sorted array
+		for(int i=0;i<array.length;i++)
+		{
+			System.out.println(array[i]);
+		}
 	}
-
-	
-
 }

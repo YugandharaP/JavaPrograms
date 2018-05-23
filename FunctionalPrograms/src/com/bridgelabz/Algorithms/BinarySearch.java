@@ -25,5 +25,25 @@ public class BinarySearch {
 		int searchWord=Utility.reInteger();
 		Arrays.sort(array);
 		System.out.println(Utility.binarySearchForInteger(array,searchWord));
+		/*
+		String[]array=new String[input];
+		System.out.println("Enter elements: ");
+		for(int i=0;i<input;i++)
+		{
+			array[i]=Utility.retNext();
+		}
+		
+		Arrays.sort(array);
+		for(int i=0;i<array.length;i++)
+		{
+			System.out.println(array[i]);
+		}
+		System.out.println("Which element you want to search?");
+		String searchWord=Utility.retNext();
+		
+		
+		System.out.println(Utility.binarySearchForStrings(array,searchWord));*/
 	}
+
+	
 }

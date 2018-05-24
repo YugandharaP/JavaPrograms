@@ -11,7 +11,10 @@ public class MyLinkedList  implements Serializable{
      */
     public static boolean isEmpty()
     {
-        return HEAD == null;
+    	if(COUNT==0)
+    		return true;
+    	else 
+    		return false;
     }
 	
 	/**To add element in linked list at last
@@ -21,7 +24,7 @@ public class MyLinkedList  implements Serializable{
 		if(HEAD==null)
 		{
 			HEAD=new Node(element);
-			HEAD=LAST;
+			LAST=HEAD;
 			COUNT++;
 			return;
 		}
@@ -41,7 +44,7 @@ public class MyLinkedList  implements Serializable{
 			return;
 		}
 		Node node=HEAD;
-		for(int i=0;i<index;i++)
+		for(int i=1;i<index;i++)
 		{
 			node=node.next;
 		}
@@ -52,6 +55,7 @@ public class MyLinkedList  implements Serializable{
 	/**It retuns size
 	 */
 	public static int size() {
+	
 		return COUNT;
 	}
 	
@@ -102,7 +106,7 @@ public class MyLinkedList  implements Serializable{
 		 {
 			 node=node.next;
 		 }
-		 node=node.next.next;
+		 node=(node.next).next;
 		 COUNT--;
 	 }
 	
@@ -128,10 +132,11 @@ public class MyLinkedList  implements Serializable{
 	 }
 	public static Object pop() {
 		Node node=HEAD;
-		while(node.next==null)
+		while(node.next!=null)
 		{
 			node=node.next;
 		}
+		COUNT--;
 		return node.element;
 	}
 	public static void display() {
@@ -139,12 +144,13 @@ public class MyLinkedList  implements Serializable{
 		{
 			System.out.println("List is empty!");
 		}
-		else {
-			Node node=HEAD;
-			while(node.next!=null) {
-				System.out.println(node.element);
-				node=node.next;
+	
+			Node temp=HEAD;
+			for(int i=0;i<size();i++) {
+				System.out.println("elements are: "+temp.element);
+				temp=temp.next;
 			}
-		}
+	
 	}
+
 }

@@ -8,10 +8,23 @@ public static void main(String[] args) {
 	list.addElement(30);
 	list.addElement(40);
 	list.addElement(50);
-	list.size();
+	
 	list.display();
-	/*//list.addElementOnIndex(2, 25);
-	//list.display();
+	/*for(int i=0;i<list.size();i++)
+	{
+		System.out.println(list.getElement(i));
+	}*/
+	list.addElementOnIndex(2, 25);
+	System.out.println(list.searchElement(10));
+	list.display();
+	System.out.println(list.size());
+	System.out.println(list.pop());
+	list.display();
+	System.out.println(list.popAtPosition(3));
+	list.display();
+	list.removeAt(2);
+	list.display();
+	/*
 	list.removeAt(4);
 	list.pop();
 	list.display();
@@ -19,6 +32,6 @@ public static void main(String[] args) {
 	list.display();
 	list.isEmpty();
 	list.size();*/
-	
 }
+
 }

@@ -261,7 +261,6 @@ public class Utility {
 		double weather = 35.74 + (0.6215 * temparature) + ((0.4275 * temparature - 35.75) * Math.pow(speed, 0.16));
 		System.out.println("National Weather Service defines the effective temperature the wind chill to be: " + weather);
 	}
-
 	/**
 	 * this function check the number is prime or not
 	 * @param num-which is to be check

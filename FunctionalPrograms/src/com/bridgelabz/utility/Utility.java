@@ -80,9 +80,7 @@ public class Utility {
 
 	/*
 	 * this function to check user input year leap year or not
-	 * 
 	 * @param number- the year will check leap year or not
-	 * 
 	 * @return the boolean decision for leap year or not
 	 */
 	public static boolean isLeapYear(int year) {
@@ -541,6 +539,28 @@ public class Utility {
 	private static double checkPower(int index) {
 		double temp=Math.pow(2, index);
 		return temp;
+	}
+
+	public static String sort(String string1) {
+		char[]array=string1.toCharArray();
+		String result="";
+		for(int i=0;i<array.length-1;i++)
+		{
+			for(int j=i+1;j<array.length;j++)
+			{
+				if(array[i]>array[j])
+				{
+					char temp=array[i];
+					array[i]=array[j];
+					array[j]=temp;
+				}
+			}
+		}
+		for(int i=0;i<array.length;i++)
+		{
+			result+=array[i];
+		}
+		return result;
 	}
 
 	

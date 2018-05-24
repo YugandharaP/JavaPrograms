@@ -36,7 +36,7 @@ class BinarySearchForString {
 			}
 	        System.out.println("Enter the word you want to search");
 	        String element= Utility.retNextLine();
-	      System.out.println(Utility.binarySearchForStrings(stringArray, element));
+	      System.out.println(Utility.binarySearch(stringArray, element));
 	        
 	    }
 }

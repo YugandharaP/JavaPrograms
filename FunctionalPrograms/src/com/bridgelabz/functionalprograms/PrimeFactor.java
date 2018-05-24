@@ -1,16 +1,12 @@
+/**Purpose: Computes the prime factorization for given number.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+*  @author  Yuga
+*  @version 1.0
+*  @since   16-05-2018
+*/
 package com.bridgelabz.functionalprograms;
 
 import java.util.HashSet;
-
 import com.bridgelabz.utility.Utility;
-
-/*
- Purpose: Computes the prime factorization for given number.
- *
- *  @author  Yuga
- *  @version 1.0
- *  @since   17-05-2018
-**/
 
 public class PrimeFactor {
 	public static void main(String[] args) {

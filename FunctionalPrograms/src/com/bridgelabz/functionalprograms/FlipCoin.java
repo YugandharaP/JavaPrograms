@@ -1,3 +1,9 @@
+/************************************************************************
+ *purpose-this function to calculate head and tail percentage after fliping a coin
+ *@author Yuga
+ *@version 1.0
+ *@since   17-05-2018
+ *****************************************************************************/
 package com.bridgelabz.functionalprograms;
 
 import java.util.Scanner;
@@ -6,23 +12,23 @@ import com.bridgelabz.utility.Utility;
 public class FlipCoin {
 	static double HEAD;
 	static double TAIL;
-	static double PERCENTAGE;
+	static double PERCENTAGE_HEAD;
+	static double PERCENTAGE_TAIL;
+
 
 	public static void main(String[] args) {
 			System.out.println("Enter the number for how many times you want to flip the coin: ");
 			int chances = Utility.reInteger();
-			
-			if (chances > 0) {
+			for(int i=0;i<chances;i++) {
 				if (Math.random() > 0.5)
 					HEAD++;
 				else
 					TAIL++;
-
-				PERCENTAGE = (HEAD / chances) * 100;
-				System.out.println(PERCENTAGE);
-				return;
-			} else
-				System.out.println("Enter only positive integer");
+			}
+			PERCENTAGE_HEAD = (HEAD / (HEAD+TAIL)) * 100;
+			PERCENTAGE_TAIL = (TAIL / (HEAD+TAIL)) * 100;
+			System.out.println("Head percentage: "+PERCENTAGE_HEAD);
+			System.out.println("tail percentage: "+PERCENTAGE_TAIL);
 		}
 
 }

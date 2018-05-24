@@ -1,10 +1,8 @@
-/*
-	 * purpose-
-	 * 
-	 * @author Yuga
-	 * @version 1.0
-	 * @since 18-05-2018
-	 */
+/* purpose-To calculate the weather temperature is to be windchill
+* @author Yuga
+* @version 1.0
+* @since 18-05-2018
+*/
 package com.bridgelabz.functionalprograms;
 
 import com.bridgelabz.utility.Utility;

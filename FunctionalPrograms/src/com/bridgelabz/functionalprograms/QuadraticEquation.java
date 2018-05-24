@@ -27,7 +27,7 @@ public class QuadraticEquation {
 			System.out.println("root-2 of 'x' = " + root2Ofx);
 		} else if (delta < 0) {
 			System.out.println("root 1 of x:is the real part = " + (-numSecond) / (2 * numFirst));
-			System.out.println("root 1 of x:is the imaginary part = " + Math.sqrt((-delta) / (2 * numFirst)));
+			System.out.println("root 2 of x:is the imaginary part = " + Math.sqrt((-delta) / (2 * numFirst)));
 		} else {
 			System.out.println("root-1 of 'x' and root-2 of 'x' = " + (-numSecond) / (2 * numFirst));
 		}
@@ -42,4 +42,12 @@ public class QuadraticEquation {
 		findRoots(numFirst, numSecond, numThird);
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
 }

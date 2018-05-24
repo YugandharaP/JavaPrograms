@@ -230,7 +230,7 @@ public class Utility {
 		int distinctValue = 0;
 		int index = 0;
 		while (couponNumber > index) {
-			distinctValue = random.nextInt(10);
+			distinctValue = random.nextInt(couponNumber);
 			count++;
 			if (list.contains(distinctValue)) {
 				continue;

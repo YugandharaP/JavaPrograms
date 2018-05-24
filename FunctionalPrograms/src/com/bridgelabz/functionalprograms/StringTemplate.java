@@ -15,7 +15,6 @@ public class StringTemplate {
 			String Output = "";
 
 			if (username.length() < 3) {
-
 				System.out.println("username should contain minimum three character!");
 				System.out.println("please enter again: ");
 				continue;

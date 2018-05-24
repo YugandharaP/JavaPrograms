@@ -281,7 +281,7 @@ public class Utility {
 	 * Bubble method to sort elements of integer type
 	 * @param array-taking array to which sort
 	 */
-	public static <T extends Comparable<T>> void bubbleSortForInteger(T[] array) {
+	public static <T extends Comparable<T>> void bubbleSort(T[] array) {
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = i + 1; j < array.length; j++) {
 				if (array[i].compareTo(array[j])>0) {
@@ -292,120 +292,53 @@ public class Utility {
 			}
 		}
 	}
-
 	/**
-	 * Bubble method to sort elements of Character type type
-	 * @param array-taking array to which sort
-	 *//*
-	public static void bubbleSortForCharacter(char[] arr) {
-		for (int i = 0; i < arr.length - 1; i++) {
-			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[i] > arr[j]) {
-					char empty = arr[i];
-					arr[i] = arr[j];
-					arr[j] = empty;
-				}
-			}
-		}
-	}*/
-
-	/**
-	 * this function sort the string alphabetically using bubble sort algorithm
-	 * @param string -the string to be sort
-	 * @return temp- sorted string
-	 */
-//	public static String sort(String string) {
-//		char[] arr = string.toCharArray();
-//		String temp = "";
-//		Utility.bubbleSortForCharacter(arr);
-//		for (int i = 0; i < arr.length; i++) {
-//			temp += arr[i];
-//		}
-//		return temp;
-//	}
-
-	/**
-	 * This function sort the string at the time of insertion
+	 * This function sort the generic type of array at the time of insertion
 	 * @param array-take unsorted array
 	 * @return array-return sorted array
 	 */
-	public static String[] insertionSortOfStrings(String[] array) {
+	public static <T extends Comparable<T>> void insertionSort(T[] array) {
 		for (int i = 1; i < array.length; i++) {
-			String peak = array[i];
+			T peak ;
+			peak = array[i];
 			int temp = i - 1;
-			while (temp >= 0 && peak.compareToIgnoreCase(array[temp]) < 0) {
-				array[temp + 1] = array[temp];
-				temp--;
-			}
-			array[temp + 1] = peak;
-
-		}
-		return array;
-	}
-
-	/**
-	 * This function sort the string at the time of insertion
-	 * @param array-unsorted array
-	 * @return array-return sorted array
-	 */
-	public static int[] insertionSortOfInteger(int[] array) {
-		for (int i = 1; i < array.length; i++) {
-			int peak = array[i];
-			int temp = i - 1;
-			while ((temp >= 0) && (array[temp] > peak)) {
+			while (temp >= 0 && peak.compareTo(array[temp]) < 0) {
 				array[temp + 1] = array[temp];
 				temp--;
 			}
 			array[temp + 1] = peak;
 		}
-		return array;
 	}
-
 	/**
-	 * This function search the Integers based on users demand
-	 * @param array
-	 * @param element index
-	 */
-	public static int binarySearchForInteger(int[] array, int searchWord) {
-		int low = 0;
-		int high = array.length - 1;
-		int mid = 0;
-		while (low <= high) {
-			mid = (low + high) / 2;
-			if (array[mid] < searchWord) {
-				low = mid + 1;
-
-			} else if (array[mid] > searchWord) {
-				high = mid - 1;
-			} else {
-				return mid;
-			}
-		}
-		return -1;
-	}
-
-	/**
-	 * This function search the Strings based on users demand
-	 * 
+	 * This function search the the generic element based on users demand
 	 * @param array,searchWord
-	 * @param word
-	 *            index
+	 * @param word index
 	 */
-	public static int binarySearchForStrings(String[] array, String searchWord) {
+	public static <T extends Comparable<T>>int binarySearch(T[] array, T searchWord1) {
 		int low = 0;
 		int high = array.length - 1;
 		int mid = 0;
 		while (low <= high) {
 			mid = (low + high) / 2;
-			if (array[mid].compareToIgnoreCase(searchWord) < 0) {
+			if (array[mid].compareTo(searchWord1) < 0) {
 				low = mid + 1;
-			} else if (array[mid].compareToIgnoreCase(searchWord) > 0) {
+			} else if (array[mid].compareTo(searchWord1) > 0) {
 				high = mid - 1;
 			} else {
 				return mid;
 			}
 		}
 		return -1;
+	}
+	
+	/**This function used to print generic array
+	 */
+	public static <T> void printArray(T[] array) {
+		String print = "";
+		for (int i = 0; i < array.length; i++) {
+			print += array[i] + " ";
+		}
+		System.out.println("Elements after sort : " + print);
 	}
 
 	/**
@@ -609,5 +542,10 @@ public class Utility {
 		double temp=Math.pow(2, index);
 		return temp;
 	}
+
+	
+
+		
+	
 	
 	}	

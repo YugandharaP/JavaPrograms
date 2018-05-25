@@ -1,13 +1,13 @@
 package com.bridgelabz.dataStructure;
 
-public class Node {
+public class Node<N> {
 	Node next;
-	Object element;
-	Node(Object element)
+	N element;
+	Node(N element)
 	{
 		this.element=element;
 	}
-	Node(Object element,Node next)
+	Node(N element,Node next)
 	{
 		this.element=element;
 		this.next=next;

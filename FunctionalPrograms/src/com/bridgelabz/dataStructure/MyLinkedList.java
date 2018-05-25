@@ -3,31 +3,31 @@ package com.bridgelabz.dataStructure;
 import java.io.Serializable;
 
 public class MyLinkedList  implements Serializable{
-	private static Node HEAD;
-	private static Node LAST;
-	private static int COUNT;
+	private static Node head;
+	private static Node last;
+	private static int count;
 	
     /**check the linked list is null or not
      */
     public static boolean isEmpty()
     {
-    	return COUNT==0;
+    	return count==0;
     }
 	
 	/**To add element in linked list at last
 	 */
 	public static void addElement(Object element)
 	{
-		if(HEAD==null)
+		if(isEmpty())
 		{
-			HEAD=new Node(element);
-			LAST=HEAD;
-			COUNT++;
+			head=new Node(element);
+			last=head;
+			count++;
 			return;
 		}
-		LAST.next=new Node(element);
-		LAST=LAST.next;
-		COUNT++;
+		last.next=new Node(element);
+		last=last.next;
+		count++;
 	}
 	/**To add element in linked list in particular position
 	 */
@@ -36,24 +36,24 @@ public class MyLinkedList  implements Serializable{
 		if(index>=size())throw new IndexOutOfBoundsException("index not fount");
 		if(index==0)
 		{
-			HEAD=new Node(element,HEAD);
-			COUNT++;
+			head=new Node(element,head);
+			count++;
 			return;
 		}
-		Node node=HEAD;
-		for(int i=1;i<index;i++)
+		Node node=head;
+		for(int i=0;i<index;i++)
 		{
 			node=node.next;
 		}
 		node.next=new Node(element,node.next);
-		COUNT++;
+		count++;
 				
 	}
 	/**It retuns size
 	 */
 	public static int size() {
 	
-		return COUNT;
+		return count;
 	}
 	
 	/**Fetch element from particular index
@@ -61,7 +61,7 @@ public class MyLinkedList  implements Serializable{
 	public static Object getElement(int index)
 	{
 		if(index>=size()) throw new IndexOutOfBoundsException("Index Not Found");
-			Node node=HEAD;
+			Node node=head;
 			for(int i=0;i<index;i++)
 			{
 				node=node.next;
@@ -74,11 +74,11 @@ public class MyLinkedList  implements Serializable{
 	public static boolean searchElement(Object element)
 	{
 		
-		if(HEAD.element==element)
+		if(head.element==element)
 		{
 			return true;
 		}
-		Node node=HEAD;
+		Node node=head;
 		while(node!=null)
 		{
 			if(node.element==element)
@@ -94,58 +94,60 @@ public class MyLinkedList  implements Serializable{
 		 if(index>=size())throw new IndexOutOfBoundsException("index not found");
 		 if(index==0)
 		 {
-			 HEAD=HEAD.next;
-			 COUNT--;
+			 head=head.next;
+			 count--;
 			 return;
 		 }
-		 Node node=HEAD;
-		 for(int i=0;i<index;i++)
+		 Node node=head;
+		 for(int i=0;i<index-1;i++)
 		 {
 			 node=node.next;
 		 }
-		 node=(node.next).next;
-		 COUNT--;
+		 node.next=(node.next).next;
+		count--;
 	 }
 	
-	public static Object popAtPosition(int index)
+	/*public static Object popAtPosition(int index)
 	 {
 		 if(index>=size())throw new IndexOutOfBoundsException("index not found");
 		 if(index==0)
 		 {
-			 Object temp=HEAD.element;
-			 HEAD=HEAD.next;
-			 COUNT--;
+			 Object temp=head.element;
+			 head=head.next;
+			 count--;
 			 return temp;
 		 }
-		 Node node=HEAD;
+		 Node node=head;
 		 for(int i=0;i<index;i++)
 		 {
 			 node=node.next;
 		 }
 		 Object temp=(node.next).element;
 		 node=(node.next).next;
-		 COUNT--;
+		// count--;
 		 return temp;
-	 }
-	public static Object pop() {
-		Node node=HEAD;
-		while(node.next!=null)
+	 } */
+	/*public static Object pop() {
+		Node node=head;
+		for(int i=0;i<size()-1;i++)
 		{
 			node=node.next;
 		}
-		COUNT--;
-		return node.element;
-	}
+		int temp=(int) node.next.element;
+		node=null;
+		return temp;
+	}*/
+	
 	public static void display() {
 		if(isEmpty())
 		{
 			System.out.println("List is empty!");
 		}
 	
-			Node temp=HEAD;
+		//Node temp=head;
 			for(int i=0;i<size();i++) {
-				System.out.println("elements are: "+temp.element);
-				temp=temp.next;
+				System.out.println("elements are: "+getElement(i));
+				//temp=temp.next;
 			}
 	
 	}

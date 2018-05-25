@@ -1,4 +1,4 @@
-package com.bridgelabz.DataStructure;
+package com.bridgelabz.dataStructure;
 
 import java.io.Serializable;
 
@@ -11,10 +11,7 @@ public class MyLinkedList  implements Serializable{
      */
     public static boolean isEmpty()
     {
-    	if(COUNT==0)
-    		return true;
-    	else 
-    		return false;
+    	return COUNT==0;
     }
 	
 	/**To add element in linked list at last

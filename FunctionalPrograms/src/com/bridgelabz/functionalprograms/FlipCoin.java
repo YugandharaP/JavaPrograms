@@ -5,10 +5,13 @@
  *@since   17-05-2018
  *****************************************************************************/
 package com.bridgelabz.functionalprograms;
-
-import java.util.Scanner;
 import com.bridgelabz.utility.Utility;
 
+/**
+ * this program calculate the percentage of head and tail after fliping coin
+ * @author Yuga
+ *
+ */
 public class FlipCoin {
 	static double HEAD;
 	static double TAIL;
@@ -26,9 +29,9 @@ public class FlipCoin {
 					TAIL++;
 			}
 			PERCENTAGE_HEAD = (HEAD / (HEAD+TAIL)) * 100;
-			PERCENTAGE_TAIL = (TAIL / (HEAD+TAIL)) * 100;
+			//PERCENTAGE_TAIL = (TAIL / (HEAD+TAIL)) * 100;
 			System.out.println("Head percentage: "+PERCENTAGE_HEAD);
-			System.out.println("tail percentage: "+PERCENTAGE_TAIL);
+			System.out.println("tail percentage: "+(100-PERCENTAGE_HEAD));
 		}
 
 }

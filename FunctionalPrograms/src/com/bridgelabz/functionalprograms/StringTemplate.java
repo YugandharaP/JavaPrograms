@@ -12,7 +12,7 @@ public class StringTemplate {
 			Scanner scn = new Scanner(System.in);
 			System.out.println("Enter Username: ");
 			String username = scn.next();
-			String Output = "";
+			String output = "";
 
 			if (username.length() < 3) {
 				System.out.println("username should contain minimum three character!");
@@ -27,10 +27,10 @@ public class StringTemplate {
 					}
 				}
 				for (int i = 0; i < array.length; i++) {
-					Output += array[i] + " ";
+					output += array[i] + " ";
 
 				}
-				System.out.println(Output);
+				System.out.println(output);
 				return;
 			}
 		}

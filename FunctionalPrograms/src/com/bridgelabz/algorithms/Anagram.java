@@ -5,7 +5,7 @@
  *@version 1.0
  *@since   19-05-2018
  **************************************************************************************************************/
-package com.bridgelabz.Algorithms;
+package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 

@@ -78,9 +78,9 @@ public class Utility {
 		return output;
 	}
 
-	/*
-	 * this function to check user input year leap year or not
-	 * @param number- the year will check leap year or not
+	
+	/**this function to check user input year leap year or not
+	 * @param year the year will check leap year or not
 	 * @return the boolean decision for leap year or not
 	 */
 	public static boolean isLeapYear(int year) {
@@ -427,6 +427,8 @@ public class Utility {
 	 */
 	public static void merge(String array[], int low, int mid, int high) {
 		int i, mid1, k = 0, low1;
+		//int lengthOfFirstSlave=mid-low+1;
+		//int lengthOfSecondSlave=high-mid;
 		String[] temp = new String[50];
 		low1 = low;
 		i = low;

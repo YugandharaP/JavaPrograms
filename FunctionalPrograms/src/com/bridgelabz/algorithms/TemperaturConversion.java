@@ -5,11 +5,11 @@
  *@since   21-05-2018
  ****************************************************************************************************************************/
 
-package com.bridgelabz.Algorithms;
+package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
-public class temperaturConversion {
+public class TemperaturConversion {
 
 	public static void main(String[] args) {
 		System.out.println("Temparature in  1.Celsius \t 2.Fahrenheit");

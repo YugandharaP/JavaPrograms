@@ -22,6 +22,7 @@ public class HarmonicNumber {
 			{
 				HARMONIC_NUMBER+=CONSTANT/i;
 			}
+		
 			System.out.println("HARMONIC_NUMBER ("+input+") = "+HARMONIC_NUMBER);
 			return;
 		}

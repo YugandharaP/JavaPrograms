@@ -6,7 +6,7 @@
  *@since   21-05-2018
  ****************************************************************************************************************************/
 
-package com.bridgelabz.Algorithms;
+package com.bridgelabz.algorithms;
 
 import java.util.Arrays;
 import com.bridgelabz.utility.Utility;

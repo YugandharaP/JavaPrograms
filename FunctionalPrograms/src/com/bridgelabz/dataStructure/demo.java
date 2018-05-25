@@ -1,4 +1,4 @@
-package com.bridgelabz.DataStructure;
+package com.bridgelabz.dataStructure;
 
 public class demo {
 public static void main(String[] args) {

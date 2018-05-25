@@ -11,7 +11,7 @@ import java.lang.Math;
 
 public class PowerOfTwo {
 
-	private static void powerOfTwo(int input) {
+	public static void powerOfTwo(int input) {
 		int output = 1;
 		for (int i = 0; i <= input; i++) {
 			if (i == 0)

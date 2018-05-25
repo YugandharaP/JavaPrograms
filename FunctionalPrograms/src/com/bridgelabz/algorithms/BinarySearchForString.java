@@ -5,11 +5,10 @@
  *@version 1.0
  *@since   22-05-2018
  **************************************************************************************************************/
-package com.bridgelabz.Algorithms;
+package com.bridgelabz.algorithms;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;

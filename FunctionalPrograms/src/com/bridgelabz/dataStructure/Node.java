@@ -1,6 +1,6 @@
 package com.bridgelabz.dataStructure;
 
-public class Node<N> {
+public class Node <N> {
 	Node next;
 	N element;
 	Node(N element)

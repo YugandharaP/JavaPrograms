@@ -17,21 +17,25 @@ public static <T> void main(String[] args) {
 	
 	
 	
-	System.out.println("size: "+stack.size());*/
-	/*MyLinkedList list=new MyLinkedList();
-	list.addElement(10);
-	list.addElement(20);
-	list.addElement(30);
-	list.addElement(40);
-	list.addElement(50);
+	System.out.println("size: "+stack.size());
+	MyLinkedList list=new MyLinkedList();
+	list.addElement("yuga");
+	list.addElement("rani");
+	list.addElement("priya");
+	list.addElement("riya");
+	list.addElement("shivani");
 	
 	list.display();
-	//list.pop();
-	//list.popAtPosition(2);
-	System.out.println("after pop");
-	list.display();
+	System.out.println("search elemnt "+ list.searchElement(20));
+	list.removeElement("shivani");
+	System.out.println("************");
+	//list.display();
+	//System.out.println("pop elemnt"+list.pop());
 	
-*/
+	//System.out.println("pop at index at 2"+list.popAtPosition(2));
+	list.display();
+	*/
+
 	/*MyQueue.enqueue(10);
 	MyQueue.enqueue(20);
 	MyQueue.enqueue(30);
@@ -43,11 +47,10 @@ public static <T> void main(String[] args) {
 	System.out.println("after delete");
 	MyQueue.display();
 */
-	
-//	MyDeque.addFront(10);
-	//MyDeque.addFront(20);
-	//MyDeque.display();
-	//System.out.println("***addFront complete****");
+	//MyDeque.addFront(10);
+//	MyDeque.addFront(20);
+	MyDeque.display();
+	System.out.println("***addFront complete****");
 	MyDeque.addRaer(30);
 	MyDeque.addRaer(40);
 	MyDeque.display();

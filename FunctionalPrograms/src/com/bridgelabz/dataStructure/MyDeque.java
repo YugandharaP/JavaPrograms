@@ -11,9 +11,9 @@ public class MyDeque {
     {
     	return count==0;
     }
-	
-	/**To add element in Queue list at rear
-	 */
+	/*
+	*//**To add element in Queue list at rear
+	 *//*
 	public static void addFront(Object element)
 	{
 		if(isEmpty())
@@ -26,7 +26,7 @@ public class MyDeque {
 		rear.next=new Node(element);
 		rear=rear.next;
 		count++;
-	}
+	}*/
 	/**It retuns size
 	 */
 	public static int size() {
@@ -35,7 +35,7 @@ public class MyDeque {
 	/**
 	 * @return
 	 */
-	public static void removeFront() {
+	public static Object removeFront() {
 		if(isEmpty())
 		{
 			System.out.println("queue is empty!");
@@ -43,6 +43,7 @@ public class MyDeque {
 		Object temp=front.element;
 		front=front.next;
 		count--;
+		return temp;
 	}
 	public static void addRaer(Object element) {
 		if(isEmpty())

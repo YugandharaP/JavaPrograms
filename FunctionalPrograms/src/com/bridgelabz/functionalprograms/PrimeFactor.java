@@ -8,6 +8,9 @@ package com.bridgelabz.functionalprograms;
 import java.util.HashSet;
 import com.bridgelabz.utility.Utility;
 
+/**Computes the prime factorization for given number.   
+ * @author yuga
+ */
 public class PrimeFactor {
 	public static void main(String[] args) {
 		System.out.println("Enter the Number");

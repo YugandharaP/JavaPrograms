@@ -10,8 +10,15 @@ package com.bridgelabz.functionalprograms;
 
 import com.bridgelabz.utility.Utility;
 
+/**To measure the time elapsed between start time and end time.
+ * @author yuga
+ *
+ */
 public class StopWatch {
 	public static void main(String[] args) {
-		Utility.stopWatch();
+		long startTime = 0; // store startTime
+		long stopTime = 0; // store stopTime
+		long elapsedTime=Utility.stopWatch(startTime,stopTime);
+		System.out.println("Elapsed time is : "+elapsedTime);
 	}
 }

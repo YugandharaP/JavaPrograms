@@ -9,9 +9,12 @@ package com.bridgelabz.functionalprograms;
 
 import com.bridgelabz.utility.Utility;
 
+/**Reads in N integers and counts the number of triples that sum to exactly 0. 
+ * @author yuga
+ */
 public class Triplets {
 
-	static int SUM = 0;
+	static int sum = 0;
 	static int count = 0;
 
 	public static void main(String[] args) {
@@ -27,26 +30,22 @@ public class Triplets {
 		System.out.println("count is = " + count);
 	}
 
-	/**
-	 * @param array
-	 *            that stores the elements
-	 * @param size
-	 *            is the length of array
+	/**this function check the ptriplets
+	 * @param array that stores the elements
+	 * @param size is the length of array
 	 * @return count which counted how many triplets having sum zero
 	 */
 	private static int checkTriplets(int[] array, int size) {
 		for (int i = 0; i < size; i++) {
 			for (int j = i + 1; j < size; j++) {
 				for (int k = j + 1; k < size; k++) {
-					SUM = array[i] + array[j] + array[k];
-					if (SUM == 0) {
+					sum = array[i] + array[j] + array[k];
+					if (sum == 0) {
 						System.out.println("Sum of " + (count + 1) + " triplet [" + array[i] + " " + array[j] + " "
-								+ array[k] + " ] is =" + SUM);
+								+ array[k] + " ] is =" + sum);
 						count++;
 					}
-
 				}
-
 			}
 		}
 		return count;

@@ -8,6 +8,9 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**To convert binary to decimal and swap nibbles and again convert binary to decimal
+ * @author yuga
+ */
 public class BinarySwapNibble {
 
 	public static void main(String[] args) {

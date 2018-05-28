@@ -9,6 +9,9 @@ package com.bridgelabz.functionalprograms;
 
 import com.bridgelabz.utility.Utility;
 
+/**
+ * Given N distinct Coupon Numbers, how many random numbers do you need to generate that distinct coupon number.
+ */
 public class CouponNumber {
 
 	public static void main(String[] args) {

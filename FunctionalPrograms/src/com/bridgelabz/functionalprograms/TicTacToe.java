@@ -11,6 +11,9 @@ import java.util.Random;
 
 import com.bridgelabz.utility.Utility;
 
+/**To write program for playing TicTacToe game
+ * @author yuga
+ */
 public class TicTacToe {
 
 	/**

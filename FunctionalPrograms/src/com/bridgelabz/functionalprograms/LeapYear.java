@@ -7,6 +7,9 @@ package com.bridgelabz.functionalprograms;
 
 import com.bridgelabz.utility.Utility;
 
+/**To check given year is leap year or not  
+ * @author yuga
+ */
 public class LeapYear {
 	public static void main(String[] args) {
 			System.out.println("Enter the year: ");

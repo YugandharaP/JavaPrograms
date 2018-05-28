@@ -7,6 +7,9 @@ package com.bridgelabz.functionalprograms;
 
 import java.util.Scanner;
 
+/** Prints the Nth harmonic number: 1/1 + 1/2 + ... + 1/N     
+ * @author yuga
+ */
 public class HarmonicNumber {
 
 	static double HARMONIC_NUMBER=0;

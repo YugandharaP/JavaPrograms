@@ -25,8 +25,8 @@ public class Gambler {
 	System.out.println("Enter NoOfTimes to play");
 	int noOfTimes=Utility.reInteger();
 	
-	Utility.isWinOrLoss($stake,$goal,noOfTimes);
-	
+	int win=Utility.isWinOrLoss($stake,$goal,noOfTimes);
+	System.out.println(win + " win of " + noOfTimes);
 	}
 
 }

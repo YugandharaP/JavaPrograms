@@ -16,6 +16,9 @@ import java.util.Arrays;
 
 import com.bridgelabz.utility.Utility;
 
+/**read the file and Search the string index using binary search
+ * @author yuga
+ */
 class BinarySearchForString {
 	public String[] fileReader() throws IOException {
 		FileReader fileReader = new FileReader("/home/adminsitrator/Documents/JavaProgramming/FunctionalPrograms/src/com/bridgelabz/Algorithms/file1");

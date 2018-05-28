@@ -9,9 +9,14 @@ package com.bridgelabz.functionalprograms;
 
 import com.bridgelabz.utility.Utility;
 
+/**this is design to solve the Quadratic cequations.In that three condition is their if delta>0,
+ *  if delta<0 (here calculate the real and imaginary part and find roots of that)and if delta==0
+ * @author yuga
+ *
+ */
 public class QuadraticEquation {
 
-	/**
+	/**this function find the roots of the number
 	 * @param numFirst to taking the value for 'a' from user
 	 * @param numSecond to taking the value for 'b' from user
 	 * @param numThird to taking the value for 'c' from user

@@ -57,11 +57,9 @@ public class Utility {
 		return scn.nextLong();
 	}
 
-	/*
+	/**
 	 * this function replace the template string with user input name
-	 * 
 	 * @param String - the string to replace the existing string with username
-	 * 
 	 * @return the modified template string
 	 */
 
@@ -91,7 +89,7 @@ public class Utility {
 			return false;
 	}
 
-	/*
+	/**
 	 * This function is print to the prime factor of user input number
 	 * @param number-to take number ,which we have to find prime factors
 	 * @return HashSet to gives unique prime factors
@@ -115,13 +113,13 @@ public class Utility {
 		return list;
 	}
 
-	/*
-	 * This function for gambling or betting which to find user will loose or win
+	/**This function for gambling or betting which to find user will loose or win
 	 * @param number-to takes numbers from user for set goal,amount and timeOfNumber
 	 * Print the result for win or loss percentage and number of time win out of
 	 * total chances
+	 * 
 	 */
-	public static void isWinOrLoss(int $stake, int $goal, int noOfTimes) {
+	public static int isWinOrLoss(int $stake, int $goal, int noOfTimes) {
 		int win = 0;
 		int loss = 0;
 		for (int i = 0; i < noOfTimes; i++) {
@@ -138,12 +136,13 @@ public class Utility {
 			}
 		}
 		// print results
-		System.out.println(win + " win of " + noOfTimes);
+		
 		if ($stake == $goal) {
 			System.out.println("you are reach the goal");
 		}
 		System.out.println("percentage of win : " + (win * 100) / (win + loss) + " %");
 		System.out.println("percentage of loose : " + (loss * 100) / (win + loss) + " %");
+		return win;
 	}
 
 	/**
@@ -216,6 +215,21 @@ public class Utility {
 		}
 	}
 
+	
+	public static <T> T[][] printTwoDArray(T [][] array)
+	{
+		for(T[] outerElement:array)
+		{
+			for(T innerElements: outerElement)
+			{
+				System.out.print(innerElements);
+			}
+			System.out.println();
+		}
+		return array;
+	}
+	
+	
 	/**
 	 * this function generate random number until we get distinct coupon number
 	 * @param couponNumber is to take the value for how many digits distinct coupon number he want
@@ -244,10 +258,10 @@ public class Utility {
 	 * @param firstNumber for first value
 	 * @param secondNumber for second value
 	 */
-	public static void euclideanDistance(int firstNumber, int secondNumber) {
+	public static double euclideanDistance(int firstNumber, int secondNumber) {
 		double distance = 0;
 		distance = Math.sqrt(Math.pow(firstNumber, 2) + Math.pow(secondNumber, 2));
-		System.out.println("the EuclideanDistance between " + firstNumber + " and " + secondNumber + " is " + distance);
+	return distance;
 	}
 
 	/**
@@ -255,9 +269,9 @@ public class Utility {
 	 * @param temparature
 	 * @param speed
 	 */
-	public static void calculateWindChill(double temparature, double speed) {
+	public static double calculateWindChill(double temparature, double speed) {
 		double weather = 35.74 + (0.6215 * temparature) + ((0.4275 * temparature - 35.75) * Math.pow(speed, 0.16));
-		System.out.println("National Weather Service defines the effective temperature the wind chill to be: " + weather);
+		return weather;
 	}
 	/**
 	 * this function check the number is prime or not
@@ -338,12 +352,14 @@ public class Utility {
 
 	/**
 	 * this function calculate elapsed time between start and stop watch
+	 * @param stopTime 
+	 * @param startTime 
 	 */
-	public static void stopWatch() {
+	public static long stopWatch(long startTime, long stopTime) {
 		System.out.println("Enter 0 for start the stopwatch");
 		int input = Utility.reInteger();
-		long startTime = 0; // store startTime
-		long stopTime = 0; // store stopTime
+		long elapsedTime;
+		
 		int flag = 0;
 		while (flag == 0) {
 			switch (input) {
@@ -359,7 +375,7 @@ public class Utility {
 		}
 		System.out.println("Start Time = " + startTime);
 		System.out.println("Stop Time = " + stopTime);
-		System.out.println("Elapsed Time = " + (stopTime - startTime) + " ns");
+		return (elapsedTime=stopTime-startTime);
 	}
 
 	/**
@@ -581,7 +597,21 @@ public class Utility {
 			return false;
 	}
 	
+	/**this function find the power of two
+	 * @param input
+	 */
+	public static void powerOfTwo(int input) {
+		int output = 1;
+		for (int i = 0; i <= input; i++) {
+			if (i == 0)
+				System.out.println("2 ^ " + i + " = " + output);
+			else {
+				output *= 2;
+				System.out.println("2 ^ " + i + " = " + output);
+			}
+		}
 
+	}
 		
 	
 	

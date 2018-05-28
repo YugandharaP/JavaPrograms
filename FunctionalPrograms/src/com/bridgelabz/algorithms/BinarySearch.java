@@ -11,6 +11,9 @@ import java.util.Arrays;
 
 import com.bridgelabz.utility.Utility;
 
+/**to search the element from array using binary search algorithm
+ * @author yuga
+ */
 public class BinarySearch {
 
 	public static <T> void main(String[] args) {

@@ -13,10 +13,10 @@ import com.bridgelabz.utility.Utility;
  *
  */
 public class FlipCoin {
-	static double HEAD;
-	static double TAIL;
-	static double PERCENTAGE_HEAD;
-	static double PERCENTAGE_TAIL;
+	static double head;
+	static double tail;
+	static double PERCENTAGE_head;
+	static double PERCENTAGE_tail;
 
 
 	public static void main(String[] args) {
@@ -24,14 +24,13 @@ public class FlipCoin {
 			int chances = Utility.reInteger();
 			for(int i=0;i<chances;i++) {
 				if (Math.random() > 0.5)
-					HEAD++;
+					head++;
 				else
-					TAIL++;
+					tail++;
 			}
-			PERCENTAGE_HEAD = (HEAD / (HEAD+TAIL)) * 100;
-			//PERCENTAGE_TAIL = (TAIL / (HEAD+TAIL)) * 100;
-			System.out.println("Head percentage: "+PERCENTAGE_HEAD);
-			System.out.println("tail percentage: "+(100-PERCENTAGE_HEAD));
+			PERCENTAGE_head = (head / (head+tail)) * 100;
+			System.out.println("head percentage: "+PERCENTAGE_head);
+			System.out.println("tail percentage: "+(100-PERCENTAGE_head));
 		}
 
 }

@@ -561,7 +561,25 @@ public class Utility {
 		}
 		return result;
 	}
+	/**
+	 * this function check prime numbers are anagram or not
+	 * @param string1
+	 * @param string2
+	 * @return true false boolean value after checking the anagram condition
+	 */
+	public static boolean isAnagram(String string1, String string2) {
 
+		if (string1.length() == string2.length()) {
+			string1 = Utility.sort(string1);
+			string2 = Utility.sort(string2);
+			if (string1.equals(string2)) {
+				return true;
+			} else {
+				return false;
+			}
+		} else
+			return false;
+	}
 	
 
 		

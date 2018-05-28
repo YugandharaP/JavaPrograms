@@ -14,7 +14,7 @@ import com.bridgelabz.utility.Utility;
 class PrimeNumberAnagramPalindrom {
 	public static void main(String[] args) {
 		String store = "";
-		for (int num = 2; num <= 1000; num++) {
+		for (int num = 2; num <= 100; num++) {
 			if (Utility.isPrime(num)) {
 				store += num + " ";
 			}
@@ -32,32 +32,12 @@ class PrimeNumberAnagramPalindrom {
 		System.out.println("Prime Anagram Nu7mbers are: ");
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = i + 1; j < array.length; j++) {
-				if (isAnagram(array[i], array[j])) {
+				if (Utility.isAnagram(array[i], array[j])) {
 					System.out.println(array[i] + " and " + array[j] + " are Anagram");
 				}
 			}
 		}
 	}
-	/**
-	 * this function check prime numbers are anagram or not
-	 * @param string1
-	 * @param string2
-	 * @return true false boolean value after checking the anagram condition
-	 */
-	private static boolean isAnagram(String string1, String string2) {
-
-		if (string1.length() == string2.length()) {
-			string1 = Utility.sort(string1);
-			string2 = Utility.sort(string2);
-			if (string1.equals(string2)) {
-				return true;
-			} else {
-				return false;
-			}
-		} else
-			return false;
-	}
-
 	/**
 	 * this function check which numbers are palindrom
 	 * @param number

@@ -56,7 +56,7 @@ public class MyQueue {
 		Node temp=front;
 		for(int i=0;i<size();i++)
 		{
-			System.out.println("elements are: " +temp.element);
+			System.out.println("element: " +temp.element);
 			temp=temp.next;
 		}
 	}

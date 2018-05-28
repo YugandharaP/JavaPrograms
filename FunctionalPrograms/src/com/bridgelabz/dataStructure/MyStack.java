@@ -32,9 +32,27 @@ public class MyStack<T> implements Serializable{
 		 }
 		 else{
 		 T temp=(T) top.element;
-		 count--;
+		 top=top.next;
+		count--;
 		 return temp;
 		 }
+	 }
+	 
+	 
+	 public static <T> T peak()
+	 {
+		 if(isEmpty()) 
+		 {
+		  try {
+			throw new MyException("Stack is Empty");
+		  } catch (MyException e) {
+			e.printStackTrace();
+			}
+		  return null;
+		 }else {
+			 return (T) top.element;
+		 }		
+		 
 	 }
 	 public static Integer size()
 	 {

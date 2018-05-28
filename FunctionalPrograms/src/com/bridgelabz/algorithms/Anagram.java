@@ -9,6 +9,8 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**to check two strings are Anagram or not.Anagram means both strings contain same characters
+ */
 public class Anagram {
 
 	/**

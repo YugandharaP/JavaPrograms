@@ -22,10 +22,12 @@ public class OrderedList<T extends Comparable<T>> {
 		for (int i = 0; i < array.length; i++) {
 			array1[i] = Integer.parseInt(array[i]);
 		}
-		// sort array
-		Utility.bubbleSort(array1);
-		for (int i = 0; i < array1.length; i++) {
-			MyLinkedList.addElement(array1[i]);
+		
+		//Utility.bubbleSort(array1);
+		MyLinkedList.addElement(array1[0]);
+		for (int i = 1; i < array1.length; i++) {
+			sortedStore(array1[i]);
+			//MyLinkedList.addElement(array1[i]);
 		}
 		SearchAndRemove(array1);
 		MyLinkedList.display();
@@ -33,28 +35,30 @@ public class OrderedList<T extends Comparable<T>> {
 
 	private static void SearchAndRemove(Integer[] array1) {
 		System.out.println("Enter the number which you to search in the  list: ");
-		Integer searchNumber = Utility.reInteger();
-		boolean value = MyLinkedList.searchElement(searchNumber);
+		Integer element = Utility.reInteger();
+		boolean value = MyLinkedList.searchElement(element);
 		if (value == true) {
 			System.out.println("The word found in the List");
-			MyLinkedList.removeElement(searchNumber);
+			MyLinkedList.removeElement(element);
 			System.out.println("search word removed from the list");
 		} else if (value == false) {
 			System.out.println("Don't worry.We will add it into List");
-			sortedStore(searchNumber);
+			sortedStore(element);
 			System.out.println("Your number added into the list");
 		}
 	}
 
-	public static void sortedStore(Integer searchNumber) {
+	public static void sortedStore(Integer element) {
 		int count = 0;
 		for (int i = 0; i < MyLinkedList.size(); i++) {
-			if (searchNumber.compareTo(MyLinkedList.getElement(i)) > 0) {
+			if (element.compareTo(MyLinkedList.getElement(i)) > 0) {
 				count++;
+				continue;
 			}
-			MyLinkedList.addElementOnIndex(count, searchNumber);
-			break;
+			MyLinkedList.addElementOnIndex(count, element);
+			return;
 		}
+		MyLinkedList.addElement(element);
 	}
 
 	public static String[] readFile(File file) throws IOException {

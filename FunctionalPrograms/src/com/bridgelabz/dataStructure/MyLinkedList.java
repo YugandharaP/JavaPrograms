@@ -42,13 +42,12 @@ public class  MyLinkedList <T> {
 			return;
 		}
 		Node node=head;
-		for(int i=0;i<index;i++)
+		for(int i=1;i<index;i++)
 		{
 			node=node.next;
 		}
 		node.next=new Node(element,node.next);
 		count++;
-				
 	}
 	/**It retuns size
 	 */
@@ -109,6 +108,9 @@ public class  MyLinkedList <T> {
 	 }
 	
 	
+	/**
+	 * @param element
+	 */
 	public static <T extends Comparable<T>>void removeElement(T element)
 	 {
 		if(head.element.equals(element))
@@ -130,6 +132,10 @@ public class  MyLinkedList <T> {
 			count--;
 		}
 	 }
+	/**
+	 * @param index
+	 * @return
+	 */
 	public static <T> T popAtPosition(int index)
 	 {
 		 if(index>=size())throw new IndexOutOfBoundsException("index not found");
@@ -150,6 +156,9 @@ public class  MyLinkedList <T> {
 		 count--;
 		 return  temp;
 	 } 
+	/**
+	 * @return
+	 */
 	public static <T> T pop() {
 		Node node=head;
 		Node previous=null;

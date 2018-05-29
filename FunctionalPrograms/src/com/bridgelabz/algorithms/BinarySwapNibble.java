@@ -16,7 +16,7 @@ public class BinarySwapNibble {
 	public static void main(String[] args) {
 		System.out.println("Enter the decimal number");
 		int decimalNum=Utility.reInteger();
-		Utility.toBinary(decimalNum);
+		
 		String binary=Utility.toBinary(decimalNum);
 		System.out.println("The binary number is: "+binary);
 		String newBinary =Utility.swapNibble(binary);

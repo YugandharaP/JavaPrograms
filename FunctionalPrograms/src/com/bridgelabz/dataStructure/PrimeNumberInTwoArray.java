@@ -2,6 +2,10 @@ package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.utility.Utility;
 
+/**purpose-To store the prime number in two-D array with range wise.0-100 in one row,100-200,200-300..ect in next dimension
+ * @author yuga
+ *@since   28-05-2018
+ */
 public class PrimeNumberInTwoArray {
 
 	public static void main(String[] args) {

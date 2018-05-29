@@ -1,13 +1,9 @@
+package com.bridgelabz.dataStructure;
+
 /**purpose: To implement Dequeue using linked list. Dequeue means we can add and remove
  * both(front and rear) sides of linked list
  * @author Yuga
- *
- */
-package com.bridgelabz.dataStructure;
-
-/**
- * To implement Dequeue using linked list. Dequeue means we can add and remove
- * both(front and rear) sides of linked list
+ *@since   25-05-2018
  */
 public class MyDeque<T> {
 	private static Node front;
@@ -16,6 +12,7 @@ public class MyDeque<T> {
 
 	/**
 	 * check the Queue list is null or not
+	 * @return boolean value
 	 */
 	public static boolean isEmpty() {
 		return count == 0;

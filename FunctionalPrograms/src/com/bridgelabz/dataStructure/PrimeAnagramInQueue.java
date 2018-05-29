@@ -2,11 +2,15 @@ package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.utility.Utility;
 
+/**purpose-To check the number is prime number or not and find the anagram number from that. store anagram numbers in queue and prints the number
+ * @author yuga
+ *@since   28-05-2018
+ */
 public class PrimeAnagramInQueue  {
 
 	public static void main(String[] args) {
 		String temp = "";
-		for (int num = 2; num <= 1000; num++) {
+		for (int num = 0; num <= 1000; num++) {
 			if (Utility.isPrime(num)) {
 				temp += num + " ";
 			}
@@ -17,7 +21,6 @@ public class PrimeAnagramInQueue  {
 				if (Utility.isAnagram(array[i], array[j])) {
 					MyQueue.enqueue(array[i]);
 					MyQueue.enqueue(array[j]);
-					//System.out.println(array[i]+" and " +array[j]+" prime Anagram");
 				}
 			}
 		}

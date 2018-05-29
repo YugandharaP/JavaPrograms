@@ -1,6 +1,9 @@
 package com.bridgelabz.dataStructure;
-
-public class MyQueue {
+/**purpose: To implement Queue using linked list. queue follows  FIFO(first In first Out) structure.
+ *@author Yuga
+ *@since   25-05-2018
+ */
+public class MyQueue <T>{
 	
 	private static Node front;
 	private static Node rear;
@@ -8,14 +11,14 @@ public class MyQueue {
 	
     /**check the Queue list is null or not
      */
-    public static boolean isEmpty()
+    public static <T>boolean isEmpty()
     {
     	return count==0;
     }
 	
 	/**To add element in Queue list at rear
 	 */
-	public static void enqueue(Object element)
+	public static <T>void enqueue(T element)
 	{
 		if(isEmpty())
 		{
@@ -28,26 +31,47 @@ public class MyQueue {
 		rear=rear.next;
 		count++;
 	}
-	/**It retuns size
+	/**It retuns size of the queue list
 	 */
-	public static int size() {
+	public static Integer size() {
 	
 		return count;
 	}
-	/**
-	 * @return
+	/**to remove the the elements in FIFO manner
+	 * @return element
 	 */
-	public static void dequeue() {
+	public static<T> T dequeue() {
 		if(isEmpty())
 		{
 			System.out.println("queue is empty!");
 		}
-		Object temp=front.element;
+		T temp=(T) front.element;
 		front=front.next;
 		count--;
+		return temp;
 	}
 	
-	public static void display() {
+	/**
+	 * This function is used to search element
+	 */
+	public static <T> boolean searchElement(T element) {
+
+		if (front.element.equals(element)) {
+			return true;
+		}
+		Node node = front;
+		while (node != null) {
+			if (node.element.equals(element))
+				return true;
+			node = node.next;
+		}
+		return false;
+	}
+	
+	/**
+	 * To display Queue elements
+	 */
+	public static <T> void display() {
 		if(isEmpty())
 		{
 			System.out.println("List is empty!");

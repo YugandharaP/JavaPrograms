@@ -1,14 +1,9 @@
-
-/**purpose- To check string is palindrom or not .In that string added into deque list and then remove character by character to check palindrom condition
- *@author Yuga
- *@since   28-05-2018
- */
 package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.utility.Utility;
-/**
- * To check string is palindrom or not using Deque algorithm.In that string added into deque list and then remove character by character to check palindrom condition
- *
+/**purpose- To check string is palindrom or not .In that string added into deque list and then remove character by character to check palindrom condition
+ *@author Yuga
+ *@since   28-05-2018
  */
 public class PalindromChecker {
 	public static void main(String[] args) {

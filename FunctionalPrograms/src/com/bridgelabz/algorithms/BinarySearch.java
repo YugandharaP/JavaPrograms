@@ -1,18 +1,12 @@
-
-/************************************************************************************************************
- * purpose-to search the element from array using binary search algorithm
- *@author  Yuga
- *@version 1.0
- *@since   21-05-2018
- **************************************************************************************************************/
 package com.bridgelabz.algorithms;
 
 import java.util.Arrays;
 
 import com.bridgelabz.utility.Utility;
 
-/**to search the element from array using binary search algorithm
- * @author yuga
+/** purpose-to search the element from array using binary search algorithm
+ *@author  Yuga
+ *@since   21-05-2018
  */
 public class BinarySearch {
 

@@ -11,28 +11,33 @@ import java.io.Writer;
 
 import com.bridgelabz.utility.Utility;
 
+/**purpose-Read .a List of Numbers from a file and arrange it ascending Order in a
+Linked List. Take user input for a number, if found then pop the number out of the
+list else insert the number in appropriate position
+ * @author yuga
+ *@since   28-05-2018
+ */
 public class OrderedList<T extends Comparable<T>> {
 	public static void main(String[] args) throws IOException {
 		String path = "/home/adminsitrator/Documents/JavaProgramming/FunctionalPrograms/src/com/bridgelabz/dataStructure/OrderedList";
 		File file = new File(path);
 		writeFile(file);
 		String[] array = readFile(file);
-		// converting string to int[]
 		Integer[] array1 = new Integer[array.length];
 		for (int i = 0; i < array.length; i++) {
 			array1[i] = Integer.parseInt(array[i]);
 		}
-		
-		//Utility.bubbleSort(array1);
 		MyLinkedList.addElement(array1[0]);
 		for (int i = 1; i < array1.length; i++) {
 			sortedStore(array1[i]);
-			//MyLinkedList.addElement(array1[i]);
 		}
 		SearchAndRemove(array1);
 		MyLinkedList.display();
 	}
 
+	/**To search the element from the file,If found then remove that element from list otherwise add to the list
+	 * @param array which contains data
+	 */
 	private static void SearchAndRemove(Integer[] array1) {
 		System.out.println("Enter the number which you to search in the  list: ");
 		Integer element = Utility.reInteger();
@@ -48,6 +53,9 @@ public class OrderedList<T extends Comparable<T>> {
 		}
 	}
 
+	/**This function used to sort the elements in ascending order at the time of insert into the list
+	 * @param element
+	 */
 	public static void sortedStore(Integer element) {
 		int count = 0;
 		for (int i = 0; i < MyLinkedList.size(); i++) {
@@ -61,6 +69,11 @@ public class OrderedList<T extends Comparable<T>> {
 		MyLinkedList.addElement(element);
 	}
 
+	/**this function is used to read the file
+	 * @param path of the file
+	 * @return array which contains data
+	 * @throws IOException
+	 */
 	public static String[] readFile(File file) throws IOException {
 		FileReader fReader = new FileReader(file);
 		BufferedReader bReader = new BufferedReader(fReader);
@@ -68,7 +81,10 @@ public class OrderedList<T extends Comparable<T>> {
 		String[] array = string.split(" ");
 		return array;
 	}
-
+	/**To write the data into file
+	 * @param file
+	 * @throws IOException
+	 */
 	public static void writeFile(File file) throws IOException {
 		FileWriter fWriter = new FileWriter(file);
 		BufferedWriter bWriter = new BufferedWriter(fWriter);

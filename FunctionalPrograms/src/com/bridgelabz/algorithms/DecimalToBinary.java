@@ -8,6 +8,9 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**To convert decimal to binary and padd the zero's to make 8-digit binary length
+ * @author yuga
+ */
 public class DecimalToBinary {
 
 	public static void main(String[] args) {

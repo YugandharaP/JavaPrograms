@@ -1,15 +1,11 @@
-
-/************************************************************************************************************
- * purpose-to check two strings are Anagram or not.Anagram means both strings contain same characters
- *@author  Yuga
- *@version 1.0
- *@since   19-05-2018
- **************************************************************************************************************/
 package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
-/**to check two strings are Anagram or not.Anagram means both strings contain same characters
+/** purpose-to check two strings are Anagram or not.Anagram means both strings contain same characters
+ *@author  Yuga
+ *@version 1.0
+ *@since   19-05-2018
  */
 public class Anagram {
 

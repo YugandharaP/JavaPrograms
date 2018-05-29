@@ -8,6 +8,9 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**to sort the elements using Bubble sort algorithm
+ * @author yuga
+ */
 public class BubbleSort {
 
 	public static <T> void main(String[] args) {

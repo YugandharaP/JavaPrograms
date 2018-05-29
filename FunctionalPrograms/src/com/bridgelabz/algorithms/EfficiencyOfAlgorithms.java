@@ -7,7 +7,6 @@
 package com.bridgelabz.algorithms;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -18,7 +17,7 @@ import com.bridgelabz.utility.Utility;
 public class EfficiencyOfAlgorithms {
 	static long START;
 	static long STOP;
-	static long ELAPSE_TIME;
+	static long elapseTime;
 	public static <T> void main(String[] args) {
 		List<Long>list=new ArrayList<Long>();
 		String count="";
@@ -39,23 +38,23 @@ public class EfficiencyOfAlgorithms {
 			Utility.bubbleSort(array);
 			Utility.printArray(array);
 			STOP =System.nanoTime();
-			list.add(ELAPSE_TIME=STOP-START);
-			System.out.println("Elapse time for bubble sort = "+ELAPSE_TIME+" ns \n");
+			list.add(elapseTime=STOP-START);
+			System.out.println("Elapse time for bubble sort = "+elapseTime+" ns \n");
 			System.out.println("*****Insertion sort****");
 			START =System.nanoTime();
 			Utility.insertionSort(array);
 			Utility.printArray(array);
 			STOP =System.nanoTime();
-			list.add(ELAPSE_TIME=STOP-START);
-			System.out.println("Elapse time for Insertion sort = "+ELAPSE_TIME+" ns\n");
+			list.add(elapseTime=STOP-START);
+			System.out.println("Elapse time for Insertion sort = "+elapseTime+" ns\n");
 			System.out.println("*****Binary search****");
 			System.out.println("Enter Search element");
 			int searchWord=Utility.reInteger();
 			START =System.nanoTime();
 			System.out.println(Utility.binarySearch(array, searchWord));
 			STOP =System.nanoTime();
-			list.add(ELAPSE_TIME=STOP-START);
-			System.out.println("Elapse time for Binary search  = "+ELAPSE_TIME+" ns\n");
+			list.add(elapseTime=STOP-START);
+			System.out.println("Elapse time for Binary search  = "+elapseTime+" ns\n");
 			//Arrays.sort(list);
 			Collections.sort(list);
 			for(int i=0;i<list.size();i++)
@@ -76,30 +75,30 @@ public class EfficiencyOfAlgorithms {
 			Utility.bubbleSort(array1);
 			Utility.printArray(array1);
 			STOP =System.nanoTime();
-			list.add(ELAPSE_TIME=STOP-START);
-			System.out.println("Elapse time for bubble sort = "+ELAPSE_TIME+" ns \n");
+			list.add(elapseTime=STOP-START);
+			System.out.println("Elapse time for bubble sort = "+elapseTime+" ns \n");
 			System.out.println("*****Insertion sort****");
 			START =System.nanoTime();
 			Utility.insertionSort(array1);
 			Utility.printArray(array1);
 			STOP =System.nanoTime();
-			list.add(ELAPSE_TIME=STOP-START);
-			System.out.println("Elapse time for Insertion sort = "+ELAPSE_TIME+" ns\n");
+			list.add(elapseTime=STOP-START);
+			System.out.println("Elapse time for Insertion sort = "+elapseTime+" ns\n");
 			System.out.println("*****Binary search****");
 			System.out.println("Enter Search word");
 			String searchWord1=Utility.retNext();
 			START =System.nanoTime();
 			System.out.println(Utility.binarySearch(array1, searchWord1));
 			STOP =System.nanoTime();
-			list.add(ELAPSE_TIME=STOP-START);
-			System.out.println("Elapse time for Binary search  = "+ELAPSE_TIME+" ns\n");
+			list.add(elapseTime=STOP-START);
+			System.out.println("Elapse time for Binary search  = "+elapseTime+" ns\n");
 			Collections.sort(list);
 			for(int i=0;i<list.size();i++)
 			{
 				count+=list.get(i)+" ";
 				
 			}
-			System.out.println("Elapsed Time: "+count+" "); 
+			System.out.println("Elapsed Time in sorted order : "+count+" "); 
 			break;
 		default:
 			System.out.println("No such a type !");

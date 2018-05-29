@@ -9,6 +9,9 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**to sort the Strings using Insertion sort algorithm
+ * @author yuga
+ */
 public class InsertionSort {
 
 	public static <T> void main(String[] args) {

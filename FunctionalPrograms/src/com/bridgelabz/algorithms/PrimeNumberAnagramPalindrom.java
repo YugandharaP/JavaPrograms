@@ -11,6 +11,10 @@ package com.bridgelabz.algorithms;
 import java.util.Arrays;
 import com.bridgelabz.utility.Utility;
 
+/**to check which two Prime numbers are Anagram and also check which prime numbers are palindrom.
+ *Anagram means both strings contain same number and palindrom means the reverse number exact same as the original number
+ * @author yuga
+ */
 class PrimeNumberAnagramPalindrom {
 	public static void main(String[] args) {
 		String store = "";
@@ -28,7 +32,7 @@ class PrimeNumberAnagramPalindrom {
 			}
 		}
 		System.out.println("Prime Palindrom Numbers are: \n" + store);
-		System.out.println("*********************************************************************");
+		System.out.println("\n");
 		System.out.println("Prime Anagram Nu7mbers are: ");
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = i + 1; j < array.length; j++) {

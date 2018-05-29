@@ -10,6 +10,11 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**Calculate the minimum number of Notes as well as the Notes to be returned by the Vending Machine as a Change
+ *taking array for Notes
+ *using Recursion Calculating number of minimum Notes Return by Vending machine
+ * @author yuga
+ */
 public class VendingMachine {
 	public static void main(String[] args) {
 		System.out.println("Enter amout:");

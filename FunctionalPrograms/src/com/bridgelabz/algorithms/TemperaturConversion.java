@@ -9,14 +9,16 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**To convert temperature in Celsius and Fahrenheit  and vise versa depends upon users need
+ * @author yuga
+ */
 public class TemperaturConversion {
-
+	static double temparature;
 	public static void main(String[] args) {
 		System.out.println("Temparature in  1.Celsius \t 2.Fahrenheit");
 		System.out.println("Enter 1 for if you want temparature in Celsius: ");
 		System.out.println("Enter 2 for if you want temparature in Fahrenheit: ");
 		int input = Utility.reInteger();
-		double temparature = 0;
 		switch (input) {
 		case 1:
 			System.out.println("Enter the temparature in Fahrenheit");

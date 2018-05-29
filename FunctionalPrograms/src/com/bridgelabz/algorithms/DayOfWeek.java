@@ -8,6 +8,9 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**prints the day of the week that date falls on.
+ * @author yuga
+ */
 public class DayOfWeek {
 
 	public static void main(String[] args) {

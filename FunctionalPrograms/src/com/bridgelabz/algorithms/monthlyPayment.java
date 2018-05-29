@@ -6,6 +6,9 @@
  **************************************************************************************************************/
 package com.bridgelabz.algorithms;
 
+/**To calculate monthly payment based on rate,year and principal
+ * @author yuga
+ */
 public class monthlyPayment {
 
 	public static void main(String[] args) {

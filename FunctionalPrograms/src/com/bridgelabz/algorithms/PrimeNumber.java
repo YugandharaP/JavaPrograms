@@ -9,6 +9,9 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**to check Numbers are prime number or not within the given range
+ * @author yuga
+ */
 public class PrimeNumber {
 	public	static String storage = "";
 	public static void main(String[] args) {

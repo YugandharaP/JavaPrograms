@@ -7,6 +7,9 @@ package com.bridgelabz.algorithms;
 
 import com.bridgelabz.utility.Utility;
 
+/**This is find the root of number using newton method
+ * @author yuga
+ */
 public class NewtonMethod {
 
 	public static void main(String[] args) {

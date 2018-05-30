@@ -176,9 +176,38 @@ public class MyLinkedList<T> {
 	public static void display() {
 		if (isEmpty()) {
 			System.out.println("List is empty!");
+			return;
 		}
 		for (int i = 0; i < size(); i++) {
 			System.out.println("elements  at index " + i + ": " + getElement(i));
 		}
 	}
+	
+	public void display1() {
+		if(isEmpty()) {
+			System.out.println("empty");
+			return;
+		}
+		Node temp=head;
+		while(temp!=null)
+		{
+			System.out.print(" "+temp.element+" ");
+			temp=temp.next;
+		}
+		System.out.println();
+	}
+	
+	 public T get(int index)
+	    {
+	        if(index>=size())
+	        {
+	            throw new IndexOutOfBoundsException();
+	        }
+	        Node<T> temp=head;
+	        for(int i=0;i<index;i++)
+	        {
+	            temp=temp.next;
+	        }
+	        return temp.element;
+	    }
 }

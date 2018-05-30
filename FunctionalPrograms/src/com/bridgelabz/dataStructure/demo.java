@@ -21,7 +21,7 @@ public static <T> void main(String[] args) {
 	System.out.println(res);
 	*/
 	
-	/*//System.out.println("size: "+stack.size());
+	//System.out.println("size: "+stack.size());
 	MyLinkedList list=new MyLinkedList();
 	list.addElement(10);
 	list.addElement(30);
@@ -31,7 +31,7 @@ public static <T> void main(String[] args) {
 	
 	list.display();
 	list.addElementOnIndex(3, 70);
-list.display();
+	list.display();
 	//System.out.println("search elemnt "+ list.searchElement(30));
 	//list.removeElement(50);
 	System.out.println("************");
@@ -39,7 +39,7 @@ list.display();
 	//System.out.println("pop elemnt"+list.pop());
 	
 	//System.out.println("pop at index at 2"+list.popAtPosition(2));
-	list.display();*/
+	list.display();
 	
 
 	/*MyQueue.enqueue(10);

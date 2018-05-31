@@ -29,14 +29,15 @@ public class MyLinkedList<T> {
 		last.next = new Node(element);
 		last = last.next;
 		count++;
+		
 	}
 	/**
 	 * To add element in linked list in particular position
 	 */
 	public static <T> void addElementOnIndex(int index, T element) {
-		if (index >= size())
-			throw new IndexOutOfBoundsException("index not fount");
-		if (index == 0) {
+		/*if (index >= size())
+			throw new IndexOutOfBoundsException("index not fount");*/
+	 if (index == 0) {
 			head = new Node(element, head);
 			count++;
 			return;
@@ -210,4 +211,7 @@ public class MyLinkedList<T> {
 	        }
 	        return temp.element;
 	    }
+	 
+	 
+	 
 }

@@ -23,7 +23,6 @@ public class demo2 {
             {
                 if(Utility.numAnagramCheck(mylinkedlist.get(i),mylinkedlist.get(j)))
                 {
-
                     if(distinctAnagram.search(mylinkedlist.get(i))==false)
                     {
                         distinctAnagram.enqueue(mylinkedlist.get(i));

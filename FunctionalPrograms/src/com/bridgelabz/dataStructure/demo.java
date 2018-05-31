@@ -22,7 +22,7 @@ public static <T> void main(String[] args) {
 	*/
 	
 	//System.out.println("size: "+stack.size());
-	MyLinkedList list=new MyLinkedList();
+	/*MyLinkedList list=new MyLinkedList();
 	list.addElement(10);
 	list.addElement(30);
 	list.addElement(40);
@@ -40,21 +40,21 @@ public static <T> void main(String[] args) {
 	
 	//System.out.println("pop at index at 2"+list.popAtPosition(2));
 	list.display();
-	
+	*/
 
-	/*MyQueue.enqueue(10);
+	MyQueue.enqueue(10);
 	MyQueue.enqueue(20);
 	MyQueue.enqueue(30);
 	MyQueue.enqueue(40);
 	MyQueue.enqueue(50);
 	System.out.println("after add");
 	MyQueue.display();
-	MyQueue.dequeue();
+	//MyQueue.dequeue();
 	System.out.println("after delete");
-	MyQueue.display();*/
+	MyQueue.display();
 
 
-	MyDeque.addFront(20);
+	/*MyDeque.addFront(20);
 	MyDeque.addFront(10);
 	MyDeque.display();
 	System.out.println("***addFront complete****");
@@ -70,7 +70,7 @@ public static <T> void main(String[] args) {
 	T eleR=MyDeque.removeRaer();
 	System.out.println(eleR);
 	MyDeque.display();
-	System.out.println("***removeRear complete****");
+	System.out.println("***removeRear complete****");*/
 }
 
 

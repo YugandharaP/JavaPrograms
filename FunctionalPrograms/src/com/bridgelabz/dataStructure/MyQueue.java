@@ -30,6 +30,7 @@ public class MyQueue <T>{
 		rear.next=new Node(element);
 		rear=rear.next;
 		count++;
+		//MyLinkedList.addElement(element);
 	}
 	/**It retuns size of the queue list
 	 */
@@ -83,6 +84,22 @@ public class MyQueue <T>{
 			System.out.println("element: " +temp.element);
 			temp=temp.next;
 		}
+	}
+	
+	
+	
+	public boolean search(T searchElement)
+	{
+		Node<T> temp=front;
+		for(int i=0;i<size();i++)
+		{
+			if(temp.element.equals(searchElement))
+			{
+				return true;
+			}
+			temp=temp.next;
+		}
+		return false;
 	}
 
 }

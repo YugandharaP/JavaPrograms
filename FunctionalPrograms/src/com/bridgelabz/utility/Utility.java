@@ -5,11 +5,15 @@
  */
 package com.bridgelabz.utility;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Utility {
 
@@ -222,7 +226,7 @@ public class Utility {
 		{
 			for(T innerElements: outerElement)
 			{
-				System.out.print(innerElements);
+				System.out.print(innerElements+" ");
 			}
 			System.out.println();
 		}
@@ -613,7 +617,37 @@ public class Utility {
 		}
 
 	}
+
+	/**this function check the numbers are anagram or not
+	 * @param number1
+	 * @param number2
+	 * @return boolean value
+	 */
+	public static boolean numAnagramCheck(Integer number1, Integer number2) {
+		String tempNumber1=number1+"";
+		String tempNumber2=number2+"";
+		return (Utility.sort(tempNumber1).equals(Utility.sort(tempNumber2)));
+	}
 		
+	/**this function match the regex and replace the value of template at appropriate position
+	 * @param regex
+	 * @param template
+	 * @param userInput
+	 * @return the changed template
+	 */
+	public static String repalceOperation(String regex, String template, String userInput)
+	{
+		Pattern pattern= Pattern.compile(regex);
+		Matcher matcher= pattern.matcher(template);
+		return	matcher.replaceAll(userInput);
+	}
 	
-	
+	/**this function find the current system date
+	 * @return current date
+	 */
+	public static String todayDate() {
+		SimpleDateFormat formater=new SimpleDateFormat("dd/MM/yyyy");
+		Date date= new Date();
+		return formater.format(date);
+	}
 	}	

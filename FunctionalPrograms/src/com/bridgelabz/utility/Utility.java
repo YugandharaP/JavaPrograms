@@ -15,6 +15,8 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.omg.Messaging.SyncScopeHelper;
+
 public class Utility {
 
 	static Scanner scn = new Scanner(System.in);
@@ -640,6 +642,7 @@ public class Utility {
 		Pattern pattern= Pattern.compile(regex);
 		Matcher matcher= pattern.matcher(template);
 		return	matcher.replaceAll(userInput);
+		
 	}
 	
 	/**this function find the current system date

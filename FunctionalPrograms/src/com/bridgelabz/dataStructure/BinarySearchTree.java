@@ -2,6 +2,11 @@ package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.utility.Utility;
 
+/**purpose-To display calendar using Queue
+ * @author yuga
+ *@version 1.0
+ * @since   30-05-2018
+ */
 public class BinarySearchTree 
 {
 	public static void main(String[] args) {

@@ -2,6 +2,11 @@ package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.utility.Utility;
 
+/**purpose-To display calendar using Queue
+ * @author yuga
+ *@version 1.0
+ * @since   30-05-2018
+ */
 public class CalendarUsingQueue {
 	static String [] days= {"S","M","T","W","TH","F","Sa "};
 	static Integer[] daysInMonth= {0,31,28,31,30,31,30,31,31,30,31,30,31};
@@ -83,6 +88,8 @@ public class CalendarUsingQueue {
 	            return;
 	        }
 	}
+	/**to print calendar 
+	 */
 	public static void printQueueTwoDArray(MyQueue[][] calendar) {
 		for(int i=0;i<calendar.length;i++)
 		{

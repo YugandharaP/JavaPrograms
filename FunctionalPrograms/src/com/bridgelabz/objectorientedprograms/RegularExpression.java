@@ -32,6 +32,7 @@ static String TEMPLATE="Hello <<name>>, We have your full name as <<full name>> 
 		TEMPLATE=Utility.repalceOperation(regexfullName,TEMPLATE,fullName);
 		TEMPLATE=Utility.repalceOperation(regexphoneNo,TEMPLATE,phoneNo);
 		TEMPLATE=Utility.repalceOperation(regexDate,TEMPLATE,date);
+		
 		System.out.println(TEMPLATE);
 	}
 }

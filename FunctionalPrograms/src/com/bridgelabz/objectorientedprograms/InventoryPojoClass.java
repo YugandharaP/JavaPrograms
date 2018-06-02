@@ -1,28 +1,33 @@
 package com.bridgelabz.objectorientedprograms;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
-public class InventoryPojoClass implements Serializable{
-	private String rice;
-	private String pulses;
-	private String wheats;
+@SuppressWarnings("serial")
+public class InventoryPojoClass<T> implements Serializable{
+	 
+	private ArrayList <Products> listRice=new ArrayList<Products>();
+	private ArrayList<Products>listPulse=new ArrayList<Products>();
+	private ArrayList<Products>listWheat=new ArrayList<Products>();
 	
-	public String getRice() {
-		return rice;
+	public ArrayList<Products> getListRice() {
+		return listRice;
 	}
-	public void setRice(String rice) {
-		this.rice = rice;
+	public void setListRice(ArrayList<Products> listRice) {
+		this.listRice = listRice;
 	}
-	public String getPulses() {
-		return pulses;
+	public ArrayList<Products> getListPulse() {
+		return listPulse;
 	}
-	public void setPulses(String pulses) {
-		this.pulses = pulses;
+	public void setListPulse(ArrayList<Products> listPulse) {
+		this.listPulse = listPulse;
 	}
-	public String getWheats() {
-		return wheats;
+	public ArrayList<Products> getListWheat() {
+		return listWheat;
 	}
-	public void setWheats(String wheats) {
-		this.wheats = wheats;
+	public void setListWheat(ArrayList<Products> listWheat) {
+		this.listWheat = listWheat;
 	}
+	
+
 }

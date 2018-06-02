@@ -1,1 +1,1 @@
-{"name":"Toor","weight":5.0,"price":160.0}{"name":"Toor","weight":5.0,"price":160.0}{"name":"Toor","weight":5.0,"price":160.0}
+{"listRice":[{"name":"Jasmin","weight":5,"price":200},{"name":"Basamati","weight":100,"price":3},{"name":"Aromatics","weight":2,"price":500}],"listPulse":[{"name":"Toor","weight":4,"price":30},{"name":"Moong","weight":3,"price":50}],"listWheat":[{"name":"Desi","weight":2,"price":40},{"name":"Patanjali","weight":5,"price":30}]}

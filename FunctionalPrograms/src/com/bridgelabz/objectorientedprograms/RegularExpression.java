@@ -6,8 +6,7 @@ import com.bridgelabz.utility.Utility;
  * RegularExpression or Regex (in short) is an API for defining String patterns that can be used for searching, manipulating and editing a text
  * @author yuga
  * @version 1.0
- * @since   30-05-2018
- *
+ * @since   31-05-2018
  */
 public class RegularExpression {
 static String fName;

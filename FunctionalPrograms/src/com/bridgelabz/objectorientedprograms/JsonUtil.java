@@ -5,13 +5,16 @@ import java.io.IOException;
 
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.impl.DefaultPrettyPrinter;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.ObjectWriter;
 
 
 public class JsonUtil {
 
 	private static ObjectMapper mapper;
+	private static ObjectWriter writer;
 	/**
 	 * static block used to declare constructor for object mapper.beacause object
 	 * mapper create once in whole program
@@ -44,7 +47,9 @@ public class JsonUtil {
 	}
 
 	public static void convertJavaToJson(File file, Object object) throws JsonGenerationException, JsonMappingException, IOException {
-		mapper.writeValue(file, object);
+		//mapper.writeValue(file, object);
+		ObjectWriter writer=mapper.writer(new DefaultPrettyPrinter());
+		writer.writeValue(file, object);
 				
 	}
 }

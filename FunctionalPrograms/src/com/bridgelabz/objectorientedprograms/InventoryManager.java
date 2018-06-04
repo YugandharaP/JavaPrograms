@@ -62,7 +62,7 @@ static long totalWheatsCost;
 	/**
 	 * @return
 	 */
-	public static Products makeWeightObjects() {
+	public static Products makeWheatObjects() {
 		Products wheat = new Products();
 		System.out.println("Enter the name of wheats");
 		String name = Utility.retNext();
@@ -97,7 +97,7 @@ static long totalWheatsCost;
 		int wheatTypes = Utility.reInteger();
 		Products wheat = new Products();
 		for (int i = 0; i < wheatTypes; i++) {
-			wheat = makeWeightObjects();
+			wheat = makeWheatObjects();
 			inventory.getListWheat().add(wheat);
 		}
 		JsonUtil.convertJavaToJson(new File(PATH),inventory);

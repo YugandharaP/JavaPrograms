@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Stock implements Serializable {
 	private String stockName;
 	private long shareNumber;
-	private long stockPrice;
+	private long stockPrice;  
 
 	public String getStockName() {
 		return stockName;

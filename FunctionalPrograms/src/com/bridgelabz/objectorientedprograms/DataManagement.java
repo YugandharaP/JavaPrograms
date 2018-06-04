@@ -17,7 +17,7 @@ public class DataManagement {
 	static long totalPulsesCost;
 	static long totalWheatsCost;
 	public static void main(String[] args) throws IOException, ParseException {
-		String path="/home/adminsitrator/Documents/JavaProgramming/FunctionalPrograms/src/com/bridgelabz/objectorientedprograms/inventory.txt";
+		String path="/home/adminsitrator/Documents/JavaProgramming/FunctionalPrograms/src/com/bridgelabz/objectorientedprograms/inventoryDetails.json";
 		JSONParser parser=new JSONParser();
 		FileReader file=new FileReader(path);
 		Object object=parser.parse(file);

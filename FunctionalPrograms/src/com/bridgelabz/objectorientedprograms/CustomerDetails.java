@@ -11,6 +11,8 @@ import com.bridgelabz.dataStructure.MyStack;
 public class CustomerDetails implements Serializable{
 	private ArrayList<CustomerInfo>customerArray=new ArrayList<CustomerInfo>();
 	
+	
+	
 	public ArrayList<CustomerInfo> getCustomerArray() {
 		return customerArray;
 	}

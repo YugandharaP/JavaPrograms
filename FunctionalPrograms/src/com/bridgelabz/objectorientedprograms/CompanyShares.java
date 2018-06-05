@@ -5,7 +5,6 @@ public class CompanyShares {
 	private long NoOfShares;
 	private long sharePrice;
 	private String dateAndTime;
-
 	public String getStock_Symbol() {
 		return stock_Symbol;
 	}

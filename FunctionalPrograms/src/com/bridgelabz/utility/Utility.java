@@ -653,4 +653,11 @@ public class Utility {
 		Date date= new Date();
 		return formater.format(date);
 	}
+	public static String todayDateAndTime() {
+		SimpleDateFormat formater = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		Date date= new Date();
+		return formater.format(date);
+	}
+	
+	
 	}	

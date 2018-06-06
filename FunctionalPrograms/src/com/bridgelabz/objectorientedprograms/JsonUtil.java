@@ -50,6 +50,7 @@ public class JsonUtil {
 		//mapper.writeValue(file, object);
 		ObjectWriter writer=mapper.writer(new DefaultPrettyPrinter());
 		writer.writeValue(file, object);
+		
 				
 	}
 }

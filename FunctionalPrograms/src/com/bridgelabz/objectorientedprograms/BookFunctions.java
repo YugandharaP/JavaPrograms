@@ -9,10 +9,10 @@ public interface BookFunctions {
 	public void addPerson() throws JsonGenerationException, JsonMappingException, IOException;
 	void editPerson(int index) throws JsonGenerationException, JsonMappingException, IOException ;
 	void deletePerson(int index) throws JsonGenerationException, JsonMappingException, IOException;
-	void sortByName();
+	void sortByLastName() throws JsonGenerationException, JsonMappingException, IOException;
 	void sortByZip() throws JsonGenerationException, JsonMappingException, IOException;
 	void showBook() throws JsonGenerationException, JsonMappingException, IOException;
-	void createNew();
-	void openPrevious();
+	void createNew() throws IOException;
+	void openExistingAddressBook(int indexOfFile);
 
 }

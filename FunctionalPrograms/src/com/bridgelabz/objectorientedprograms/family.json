@@ -1,0 +1,25 @@
+[ {
+  "firstName" : "bijaya",
+  "lastName" : "senapati",
+  "address" : "thane",
+  "city" : "thane",
+  "state" : "thane",
+  "zipCode" : "34000",
+  "phoneNum" : 9087654321
+}, {
+  "firstName" : "yuga",
+  "lastName" : "paranjape",
+  "address" : "vashi",
+  "city" : "sawantwadi",
+  "state" : "maharashtra",
+  "zipCode" : "34000",
+  "phoneNum" : 876543210
+}, {
+  "firstName" : "vidya",
+  "lastName" : "paranjape",
+  "address" : "bandra",
+  "city" : "mumbai",
+  "state" : "maharashtra",
+  "zipCode" : "34500",
+  "phoneNum" : 90876543
+} ]

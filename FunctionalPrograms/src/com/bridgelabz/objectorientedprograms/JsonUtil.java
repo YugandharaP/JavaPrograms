@@ -1,7 +1,9 @@
 package com.bridgelabz.objectorientedprograms;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonParseException;
@@ -9,6 +11,10 @@ import org.codehaus.jackson.impl.DefaultPrettyPrinter;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.ObjectWriter;
+import org.codehaus.jackson.type.TypeReference;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 
 public class JsonUtil {
@@ -51,6 +57,7 @@ public class JsonUtil {
 		ObjectWriter writer=mapper.writer(new DefaultPrettyPrinter());
 		writer.writeValue(file, object);
 		
-				
+		
 	}
+	
 }

@@ -5,6 +5,9 @@
  */
 package com.bridgelabz.utility;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,7 +18,18 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.impl.DefaultPrettyPrinter;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.ObjectWriter;
+import org.codehaus.jackson.type.TypeReference;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.omg.Messaging.SyncScopeHelper;
+
+import com.bridgelabz.objectorientedprograms.PersonDetails;
 
 public class Utility {
 
@@ -65,7 +79,9 @@ public class Utility {
 
 	/**
 	 * this function replace the template string with user input name
-	 * @param String - the string to replace the existing string with username
+	 * 
+	 * @param String
+	 *            - the string to replace the existing string with username
 	 * @return the modified template string
 	 */
 
@@ -80,9 +96,11 @@ public class Utility {
 		return output;
 	}
 
-	
-	/**this function to check user input year leap year or not
-	 * @param year the year will check leap year or not
+	/**
+	 * this function to check user input year leap year or not
+	 * 
+	 * @param year
+	 *            the year will check leap year or not
 	 * @return the boolean decision for leap year or not
 	 */
 	public static boolean isLeapYear(int year) {
@@ -97,7 +115,9 @@ public class Utility {
 
 	/**
 	 * This function is print to the prime factor of user input number
-	 * @param number-to take number ,which we have to find prime factors
+	 * 
+	 * @param number-to
+	 *            take number ,which we have to find prime factors
 	 * @return HashSet to gives unique prime factors
 	 */
 
@@ -119,10 +139,13 @@ public class Utility {
 		return list;
 	}
 
-	/**This function for gambling or betting which to find user will loose or win
-	 * @param number-to takes numbers from user for set goal,amount and timeOfNumber
-	 * Print the result for win or loss percentage and number of time win out of
-	 * total chances
+	/**
+	 * This function for gambling or betting which to find user will loose or win
+	 * 
+	 * @param number-to
+	 *            takes numbers from user for set goal,amount and timeOfNumber Print
+	 *            the result for win or loss percentage and number of time win out
+	 *            of total chances
 	 * 
 	 */
 	public static int isWinOrLoss(int $stake, int $goal, int noOfTimes) {
@@ -142,7 +165,7 @@ public class Utility {
 			}
 		}
 		// print results
-		
+
 		if ($stake == $goal) {
 			System.out.println("you are reach the goal");
 		}
@@ -154,7 +177,9 @@ public class Utility {
 	/**
 	 * this function for 2D arrays of integers and doubles and boolean from standard
 	 * input and printing them out to standard output.
-	 * @param number -to take input number to choose the options
+	 * 
+	 * @param number
+	 *            -to take input number to choose the options
 	 */
 	public static void twoDArray(int input) {
 		switch (input) {
@@ -221,24 +246,22 @@ public class Utility {
 		}
 	}
 
-	
-	public static <T> T[][] printTwoDArray(T [][] array)
-	{
-		for(T[] outerElement:array)
-		{
-			for(T innerElements: outerElement)
-			{
-				System.out.print(innerElements+" ");
+	public static <T> T[][] printTwoDArray(T[][] array) {
+		for (T[] outerElement : array) {
+			for (T innerElements : outerElement) {
+				System.out.print(innerElements + " ");
 			}
 			System.out.println();
 		}
 		return array;
 	}
-	
-	
+
 	/**
 	 * this function generate random number until we get distinct coupon number
-	 * @param couponNumber is to take the value for how many digits distinct coupon number he want
+	 * 
+	 * @param couponNumber
+	 *            is to take the value for how many digits distinct coupon number he
+	 *            want
 	 * @return count value that how many times random number generated
 	 */
 	public static int couponGenerator(int couponNumber) {
@@ -260,18 +283,23 @@ public class Utility {
 	}
 
 	/**
-	 * this function calculate euclideanDistance using the inbuild function  math.pow() and math.sqrt()
-	 * @param firstNumber for first value
-	 * @param secondNumber for second value
+	 * this function calculate euclideanDistance using the inbuild function
+	 * math.pow() and math.sqrt()
+	 * 
+	 * @param firstNumber
+	 *            for first value
+	 * @param secondNumber
+	 *            for second value
 	 */
 	public static double euclideanDistance(int firstNumber, int secondNumber) {
 		double distance = 0;
 		distance = Math.sqrt(Math.pow(firstNumber, 2) + Math.pow(secondNumber, 2));
-	return distance;
+		return distance;
 	}
 
 	/**
 	 * this function is find the weather temparature is to be windchill
+	 * 
 	 * @param temparature
 	 * @param speed
 	 */
@@ -279,13 +307,17 @@ public class Utility {
 		double weather = 35.74 + (0.6215 * temparature) + ((0.4275 * temparature - 35.75) * Math.pow(speed, 0.16));
 		return weather;
 	}
+
 	/**
 	 * this function check the number is prime or not
-	 * @param num-which is to be check
+	 * 
+	 * @param num-which
+	 *            is to be check
 	 * @return true or false after checking prime number
 	 */
 	public static boolean isPrime(int num) {
-		if(num<2)return false;
+		if (num < 2)
+			return false;
 		for (int i = 2; i <= num / 2; i++) {
 			if (num % i == 0)
 				return false;
@@ -295,12 +327,14 @@ public class Utility {
 
 	/**
 	 * Bubble method to sort elements of integer type
-	 * @param array-taking array to which sort
+	 * 
+	 * @param array-taking
+	 *            array to which sort
 	 */
 	public static <T extends Comparable<T>> void bubbleSort(T[] array) {
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = i + 1; j < array.length; j++) {
-				if (array[i].compareTo(array[j])>0) {
+				if (array[i].compareTo(array[j]) > 0) {
 					T temp = array[i];
 					array[i] = array[j];
 					array[j] = temp;
@@ -308,14 +342,17 @@ public class Utility {
 			}
 		}
 	}
+
 	/**
 	 * This function sort the generic type of array at the time of insertion
-	 * @param array-take unsorted array
+	 * 
+	 * @param array-take
+	 *            unsorted array
 	 * @return array-return sorted array
 	 */
 	public static <T extends Comparable<T>> void insertionSort(T[] array) {
 		for (int i = 1; i < array.length; i++) {
-			T peak ;
+			T peak;
 			peak = array[i];
 			int temp = i - 1;
 			while (temp >= 0 && peak.compareTo(array[temp]) < 0) {
@@ -325,12 +362,15 @@ public class Utility {
 			array[temp + 1] = peak;
 		}
 	}
+
 	/**
 	 * This function search the the generic element based on users demand
+	 * 
 	 * @param array,searchWord
-	 * @param word index
+	 * @param word
+	 *            index
 	 */
-	public static <T extends Comparable<T>>int binarySearch(T[] array, T searchWord1) {
+	public static <T extends Comparable<T>> int binarySearch(T[] array, T searchWord1) {
 		int low = 0;
 		int high = array.length - 1;
 		int mid = 0;
@@ -346,8 +386,9 @@ public class Utility {
 		}
 		return -1;
 	}
-	
-	/**This function used to print generic array
+
+	/**
+	 * This function used to print generic array
 	 */
 	public static <T> void printArray(T[] array) {
 		String print = "";
@@ -359,14 +400,15 @@ public class Utility {
 
 	/**
 	 * this function calculate elapsed time between start and stop watch
-	 * @param stopTime 
-	 * @param startTime 
+	 * 
+	 * @param stopTime
+	 * @param startTime
 	 */
 	public static long stopWatch(long startTime, long stopTime) {
 		System.out.println("Enter 0 for start the stopwatch");
 		int input = Utility.reInteger();
 		long elapsedTime;
-		
+
 		int flag = 0;
 		while (flag == 0) {
 			switch (input) {
@@ -382,7 +424,7 @@ public class Utility {
 		}
 		System.out.println("Start Time = " + startTime);
 		System.out.println("Stop Time = " + stopTime);
-		return (elapsedTime=stopTime-startTime);
+		return (elapsedTime = stopTime - startTime);
 	}
 
 	/**
@@ -433,7 +475,8 @@ public class Utility {
 		return true;
 	}
 
-	/**This function divide the array elements into single cell
+	/**
+	 * This function divide the array elements into single cell
 	 */
 	public static void mergeSort(String[] array, int low, int high) {
 		int mid;
@@ -444,12 +487,14 @@ public class Utility {
 			merge(array, low, mid, high);
 		}
 	}
-	/**This function merge the array after comparing the strings
+
+	/**
+	 * This function merge the array after comparing the strings
 	 */
 	public static void merge(String array[], int low, int mid, int high) {
 		int i, mid1, k = 0, low1;
-		//int lengthOfFirstSlave=mid-low+1;
-		//int lengthOfSecondSlave=high-mid;
+		// int lengthOfFirstSlave=mid-low+1;
+		// int lengthOfSecondSlave=high-mid;
 		String[] temp = new String[50];
 		low1 = low;
 		i = low;
@@ -480,61 +525,64 @@ public class Utility {
 		}
 	}
 
-	/**this function convert decimal to binary
-	 * @param decimalNum-take decimal number
+	/**
+	 * this function convert decimal to binary
+	 * 
+	 * @param decimalNum-take
+	 *            decimal number
 	 */
 	public static String toBinary(int decimalNum) {
-		String remainder="";
-		String binary="";
-		int length=0;
-		while(decimalNum>0)
-		{
-			remainder+=decimalNum%2;
-			decimalNum/=2;
+		String remainder = "";
+		String binary = "";
+		int length = 0;
+		while (decimalNum > 0) {
+			remainder += decimalNum % 2;
+			decimalNum /= 2;
 		}
-		length=checklength(remainder);
-		
-		for(int i=0;i<length;i++)
-		{
-			remainder+='0';
+		length = checklength(remainder);
+
+		for (int i = 0; i < length; i++) {
+			remainder += '0';
 		}
-		for(int i=remainder.length()-1;i>=0;i--)
-		{
-			binary+=remainder.charAt(i);
+		for (int i = remainder.length() - 1; i >= 0; i--) {
+			binary += remainder.charAt(i);
 		}
 		return binary;
 	}
 
-	/**this function check the length and return the length
+	/**
+	 * this function check the length and return the length
+	 * 
 	 * @param remainder
 	 * @return length
 	 */
 	private static int checklength(String remainder) {
-		int length=0;
-		 if(remainder.length()>0 && remainder.length()<8) 
-		return length=8-remainder.length();
+		int length = 0;
+		if (remainder.length() > 0 && remainder.length() < 8)
+			return length = 8 - remainder.length();
 		return length;
 	}
 
-	/**This function swap old binary nibble and return new binary number
+	/**
+	 * This function swap old binary nibble and return new binary number
 	 */
 	public static String swapNibble(String binary) {
-		int length=binary.length();
-		String nibble1="";
-		String nibble2="";
-		String newBinary="";
-		for(int i=0;i<length/2;i++)
-		{
-			nibble1+=binary.charAt(i);
-			//System.out.println(nibble1);
+		int length = binary.length();
+		String nibble1 = "";
+		String nibble2 = "";
+		String newBinary = "";
+		for (int i = 0; i < length / 2; i++) {
+			nibble1 += binary.charAt(i);
+			// System.out.println(nibble1);
 		}
-		for(int i=length/2;i<length;i++)
-		{
-			nibble2+=binary.charAt(i);
-			//System.out.println(nibble2);
+		for (int i = length / 2; i < length; i++) {
+			nibble2 += binary.charAt(i);
+			// System.out.println(nibble2);
 		}
-		String temp=nibble1;nibble1=nibble2;nibble2=temp;
-		newBinary=nibble1+nibble2;
+		String temp = nibble1;
+		nibble1 = nibble2;
+		nibble2 = temp;
+		newBinary = nibble1 + nibble2;
 		return newBinary;
 	}
 
@@ -542,13 +590,12 @@ public class Utility {
 	 * this function convert binary number to decimal number
 	 */
 	public static int toDecimal(String newBinary) {
-		int length=newBinary.length();
-		int newDecimal=0;int index=0;
-		for(int i= length-1;i>=0;i--)
-		{
-			if(newBinary.charAt(i)=='1')
-			{
-				newDecimal+=(int) checkPower(index);
+		int length = newBinary.length();
+		int newDecimal = 0;
+		int index = 0;
+		for (int i = length - 1; i >= 0; i--) {
+			if (newBinary.charAt(i) == '1') {
+				newDecimal += (int) checkPower(index);
 			}
 			index++;
 		}
@@ -556,36 +603,34 @@ public class Utility {
 	}
 
 	/**
-	 * this function calculate  the power of two and return
+	 * this function calculate the power of two and return
 	 */
 	private static double checkPower(int index) {
-		double temp=Math.pow(2, index);
+		double temp = Math.pow(2, index);
 		return temp;
 	}
 
 	public static String sort(String string1) {
-		char[]array=string1.toCharArray();
-		String result="";
-		for(int i=0;i<array.length-1;i++)
-		{
-			for(int j=i+1;j<array.length;j++)
-			{
-				if(array[i]>array[j])
-				{
-					char temp=array[i];
-					array[i]=array[j];
-					array[j]=temp;
+		char[] array = string1.toCharArray();
+		String result = "";
+		for (int i = 0; i < array.length - 1; i++) {
+			for (int j = i + 1; j < array.length; j++) {
+				if (array[i] > array[j]) {
+					char temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
 				}
 			}
 		}
-		for(int i=0;i<array.length;i++)
-		{
-			result+=array[i];
+		for (int i = 0; i < array.length; i++) {
+			result += array[i];
 		}
 		return result;
 	}
+
 	/**
 	 * this function check prime numbers are anagram or not
+	 * 
 	 * @param string1
 	 * @param string2
 	 * @return true false boolean value after checking the anagram condition
@@ -603,8 +648,10 @@ public class Utility {
 		} else
 			return false;
 	}
-	
-	/**this function find the power of two
+
+	/**
+	 * this function find the power of two
+	 * 
 	 * @param input
 	 */
 	public static void powerOfTwo(int input) {
@@ -620,44 +667,93 @@ public class Utility {
 
 	}
 
-	/**this function check the numbers are anagram or not
+	/**
+	 * this function check the numbers are anagram or not
+	 * 
 	 * @param number1
 	 * @param number2
 	 * @return boolean value
 	 */
 	public static boolean numAnagramCheck(Integer number1, Integer number2) {
-		String tempNumber1=number1+"";
-		String tempNumber2=number2+"";
+		String tempNumber1 = number1 + "";
+		String tempNumber2 = number2 + "";
 		return (Utility.sort(tempNumber1).equals(Utility.sort(tempNumber2)));
 	}
-		
-	/**this function match the regex and replace the value of template at appropriate position
+
+	/**
+	 * this function match the regex and replace the value of template at
+	 * appropriate position
+	 * 
 	 * @param regex
 	 * @param template
 	 * @param userInput
 	 * @return the changed template
 	 */
-	public static String repalceOperation(String regex, String template, String userInput)
-	{
-		Pattern pattern= Pattern.compile(regex);
-		Matcher matcher= pattern.matcher(template);
-		return	matcher.replaceAll(userInput);
-		
+	public static String repalceOperation(String regex, String template, String userInput) {
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(template);
+		return matcher.replaceAll(userInput);
+
 	}
-	
-	/**this function find the current system date
+
+	/**
+	 * this function find the current system date
+	 * 
 	 * @return current date
 	 */
 	public static String todayDate() {
-		SimpleDateFormat formater=new SimpleDateFormat("dd/MM/yyyy");
-		Date date= new Date();
+		SimpleDateFormat formater = new SimpleDateFormat("dd/MM/yyyy");
+		Date date = new Date();
 		return formater.format(date);
 	}
+
 	public static String todayDateAndTime() {
 		SimpleDateFormat formater = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-		Date date= new Date();
+		Date date = new Date();
 		return formater.format(date);
 	}
+
+	/**
+	 * @param FILEPATH
+	 * @param file
+	 * @return
+	 */
+	/*public static ArrayList<String> convertJsonToList(String FILEPATH) {
+		JSONParser parser = new JSONParser();
+		ArrayList<String> bookList = new ArrayList<>();
+		Object object;
+		try {
+			object = parser.parse(new FileReader(FILEPATH));
+			JSONArray jsonList = (JSONArray) object;
+			for (Object object1 : bookList) {
+				String bookName = object.toString();
+				bookList.add(bookName);
+			}
+		} catch (IOException | ParseException e) {
+			System.out.println("Error in loading Address Books");
+		}
+		return bookList;
+	}*/
 	
-	
-	}	
+	public static ArrayList<String> convertJsonToList(String FILEPATH) {
+		ObjectMapper mapper = new ObjectMapper();
+		ArrayList<String> bookList = new ArrayList<>();
+		try {
+			bookList = mapper.readValue(new File(FILEPATH), new TypeReference<ArrayList<String>>() {});
+		} catch (IOException e) {
+			System.err.println("Error in loading Address Books");
+			e.printStackTrace();
+		}
+		return bookList;
+	}
+
+	public static <T>void convertJavaToJson( T object,String file)
+			throws JsonGenerationException, JsonMappingException, IOException {
+		// mapper.writeValue(file, object);
+		ObjectMapper mapper = new ObjectMapper();
+		ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+		writer.writeValue(new File(file), object);
+
+	}
+
+}

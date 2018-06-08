@@ -4,6 +4,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import com.bridgelabz.utility.Utility;
 
@@ -27,7 +32,7 @@ public class HashSearchFunction {
 		int index = 0;
 		for (int i = 0; i < arrayInt.length; i++) {
 			index = arrayInt[i] % 11;
-			//System.out.println("i:" + i + "  index: " + index + "  array element " + arrayInt[i]);
+			System.out.println("i:" + i + "  index: " + index + "  array element " + arrayInt[i]);
 			listArray[index].addElement(arrayInt[i]);
 		}
 
@@ -40,6 +45,7 @@ public class HashSearchFunction {
 		if (listArray[index].searchElement(searchNumber) == true) {
 			System.out.println("The number found in the List");
 			MyLinkedList.removeElement(searchNumber);
+			
 		} else {
 			System.out.println("Don't worry.We will add it into List");
 			listArray[index].addElement(searchNumber);

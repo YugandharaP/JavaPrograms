@@ -16,6 +16,7 @@ public class DecimalToBinary {
 	public static void main(String[] args) {
 		System.out.println("Enter the decimal number");
 		int decimalNum=Utility.reInteger();
+		
 		String binary=Utility.toBinary(decimalNum);
 		System.out.println("The binary number is: "+binary);
 	}

@@ -29,6 +29,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.omg.Messaging.SyncScopeHelper;
 
+import com.bridgelabz.dataStructure.MyQueue;
 import com.bridgelabz.objectorientedprograms.PersonDetails;
 
 public class Utility {
@@ -735,16 +736,15 @@ public class Utility {
 		return bookList;
 	}*/
 	
-	public static ArrayList<String> convertJsonToList(String FILEPATH) {
+	public static <T> ArrayList<T> convertJsonToList(String FILEPATH,ArrayList<T> list) {
 		ObjectMapper mapper = new ObjectMapper();
-		ArrayList<String> bookList = new ArrayList<>();
 		try {
-			bookList = mapper.readValue(new File(FILEPATH), new TypeReference<ArrayList<String>>() {});
+			list = mapper.readValue(new File(FILEPATH), new TypeReference<ArrayList<T>>() {});
 		} catch (IOException e) {
 			System.err.println("Error in loading Address Books");
 			e.printStackTrace();
 		}
-		return bookList;
+		return list;
 	}
 
 	public static <T>void convertJavaToJson( T object,String file)
@@ -754,6 +754,10 @@ public class Utility {
 		ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
 		writer.writeValue(new File(file), object);
 
+	}
+
+	public static MyQueue[] distribute(String[][] players) {
+		return null;
 	}
 
 }

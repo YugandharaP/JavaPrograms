@@ -102,4 +102,16 @@ public class MyQueue <T>{
 		return false;
 	}
 
+	/*public char[] pop(int i) {
+		
+		if(isEmpty())
+		{
+			System.out.println("queue is empty!");
+		}
+		T temp=(T) front.element;
+		front=front.next;
+		count--;
+		return temp;
+	}*/
+
 }

@@ -31,9 +31,12 @@ public class AddressBookManager {
 	AddressBook addressBook;
 	String select;
 
+	/**This constructor will extract all the file paths from json at the time of execution
+	 * @param storagefilepath
+	 */
 	AddressBookManager(String storagefilepath) {
 		if (bookList == null) {
-			bookList = Utility.convertJsonToList(storagefilepath);
+			bookList = Utility.convertJsonToList(storagefilepath,bookList);
 			System.out.println();
 		} else {
 
@@ -114,6 +117,8 @@ public class AddressBookManager {
 
 	}
 
+	/**This function perform the close address book operation
+	 */
 	public void close() {
 		System.out.println("you want to save all details in same address book ?  Save/Cancle\t \n  save[0]  cancle[1]");
 		int choice = Utility.reInteger();
@@ -121,23 +126,26 @@ public class AddressBookManager {
 			try {
 				Utility.convertJavaToJson(addressBook.getPersonList(), select);
 				System.out.println("data save successfully");
+				showBook();
 				AddressBookManager manager = new AddressBookManager(UserIntefaceOfAddressBook.STORAGE_FILE_PATH);
 				UserIntefaceOfAddressBook.showInitialOptions(manager);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		else if (choice == 1) {
+			System.out.println("data not saved");
 			AddressBookManager manager = new AddressBookManager(UserIntefaceOfAddressBook.STORAGE_FILE_PATH);
 			UserIntefaceOfAddressBook.showInitialOptions(manager);
 		}
 	}
 
 	/**
-	 * Quit this function quit the program
+	 * this function quit the program
 	 */
 	public void exit() {
 		System.out.println("Do You Really Want To Exit From Address Book Application ?");
 		System.out.println("yes[0]/no[1]");
+		AddressBook book=new AddressBook(select);
 		int input = Utility.reInteger();
 		if (input == 0) {
 			System.err.println("Thanks! Visit Again...");
@@ -148,26 +156,11 @@ public class AddressBookManager {
 		}
 	}
 
-	/*public void save() {
-		try {
-			Utility.convertJavaToJson(addressBook.getPersonList(), select);
-			System.out.println("data save successfully");
-			cancle();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}*/
-
-	public void cancle() {
-		
-	}
-
 	/**
 	 * This function show the address book lists
-	 * 
 	 */
 	public void showList() {
-		bookList = Utility.convertJsonToList(UserIntefaceOfAddressBook.STORAGE_FILE_PATH);
+		bookList = Utility.convertJsonToList(UserIntefaceOfAddressBook.STORAGE_FILE_PATH,bookList);
 		for (int i = 0; i < bookList.size(); i++) {
 			
 			System.out.println("index : " + i + " " + bookList.get(i));
@@ -225,7 +218,7 @@ public class AddressBookManager {
 		UserIntefaceOfAddressBook.showInitialOptions(addressManager);
 	}
 
-	/**
+	/**this funtion open the existing address books
 	 * @param indexOfFile
 	 */
 	public void openExistingAddressBook(int indexOfFile) {
@@ -288,45 +281,45 @@ public class AddressBookManager {
 			System.out.println("Enter new Address");
 			String newAddress = Utility.retNext();
 			addressBook.getPersonList().get(index).setAddress(newAddress);
-			Utility.convertJavaToJson(addressBook.getPersonList(), select);
+			//Utility.convertJavaToJson(addressBook.getPersonList(), select);
 			System.err.println("Person details update successfully");
-			showBook();
+			//showBook();
 			showOptions();
 			break;
 		case 2:
 			System.out.println("Enter the new city name");
 			String newCity = Utility.retNext();
 			addressBook.getPersonList().get(index).setCity(newCity);
-			Utility.convertJavaToJson(addressBook.getPersonList(), select);
+			//Utility.convertJavaToJson(addressBook.getPersonList(), select);
 			System.err.println("Person details update successfully");
-			showBook();
+			//showBook();
 			showOptions();
 			break;
 		case 3:
 			System.out.println("Enter the new state name");
 			String newState = Utility.retNext();
 			addressBook.getPersonList().get(index).setState(newState);
-			Utility.convertJavaToJson(addressBook.getPersonList(), select);
+			//Utility.convertJavaToJson(addressBook.getPersonList(), select);
 			System.err.println("Person details update successfully");
-			showBook();
+			//showBook();
 			showOptions();
 			break;
 		case 4:
 			System.out.println("Enter the new ZipCode");
 			String newZipCode = Utility.retNext();
 			addressBook.getPersonList().get(index).setZipCode(newZipCode);
-			Utility.convertJavaToJson(addressBook.getPersonList(), select);
+			//Utility.convertJavaToJson(addressBook.getPersonList(), select);
 			System.err.println("Person details update successfully");
-			showBook();
+			//showBook();
 			showOptions();
 			break;
 		case 5:
 			System.out.println("Enter the new Contact number");
 			String newMobNumber = Utility.retNext();
 			addressBook.getPersonList().get(index).setZipCode(newMobNumber);
-			Utility.convertJavaToJson(addressBook.getPersonList(), select);
+			//Utility.convertJavaToJson(addressBook.getPersonList(), select);
 			System.err.println("Person details update successfully");
-			showBook();
+			//showBook();
 			showOptions();
 			break;
 		}
@@ -338,8 +331,8 @@ public class AddressBookManager {
 	public void deletePerson(int index1) throws JsonGenerationException, JsonMappingException, IOException {
 		addressBook.getPersonList().remove(index1);
 		System.err.println("data delete successfully");
-		Utility.convertJavaToJson(addressBook.getPersonList(), select);
-		showBook();
+		//Utility.convertJavaToJson(addressBook.getPersonList(), select);
+		//showBook();
 		showOptions();
 	}
 
@@ -361,8 +354,8 @@ public class AddressBookManager {
 			}
 		}
 		System.err.println("sorted by LastName successfully");
-		Utility.convertJavaToJson(addressBook.getPersonList(), select);
-		showBook();
+		//Utility.convertJavaToJson(addressBook.getPersonList(), select);
+		//showBook();
 		showOptions();
 	}
 
@@ -384,20 +377,17 @@ public class AddressBookManager {
 			}
 		}
 		System.err.println("sorted by zipcode successfully");
-		Utility.convertJavaToJson(addressBook.getPersonList(), select);
-		showBook();
+		//Utility.convertJavaToJson(addressBook.getPersonList(), select);
+		//showBook();
 		showOptions();
 	}
 
 	/**
 	 * this function sort the user details by first name
-	 * 
-	 * @param i
-	 *            is the index
-	 * @param object2
-	 *            is the last person detail
-	 * @param j
-	 *            is the index
+	 * @param object1 is the one person detail
+	 * @param i is the index
+	 * @param object2 is the another person detail
+	 * @param j is the index
 	 */
 	private void sortByFirstName(PersonDetails object1, int i, PersonDetails object2, int j) {
 
@@ -424,24 +414,6 @@ public class AddressBookManager {
 		} catch (IOException | ParseException e) {
 			e.printStackTrace();
 		}
-		/*
-		 * JSONParser parser = new JSONParser();
-		 * 
-		 * try { Object object = parser.parse(select); JSONObject jsonObject =
-		 * (JSONObject) object; JSONArray personArray = (JSONArray) object; for (int i =
-		 * 0; i < personArray.size(); i++) { JSONObject details = (JSONObject)
-		 * personArray.get(i); System.out.println("index : " + i + " " + details); }
-		 * 
-		 * } catch (ParseException e) { e.printStackTrace(); }
-		 */
-		// jsonObject = (JSONObject) parser.parse(new InputStreamReader(new
-		// FileInputStream("items.json")));
-
-		/*
-		 * for(int i=0;i<addressBook.getPersonList().size();i++) {
-		 * System.out.println("index : " + i + " " +
-		 * addressBook.getPersonList().toString()); }
-		 */
 	}
 
 }

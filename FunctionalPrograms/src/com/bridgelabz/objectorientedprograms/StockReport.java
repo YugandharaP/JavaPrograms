@@ -11,6 +11,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+
 import com.bridgelabz.utility.Utility;
 
 /**To generate stock report
@@ -21,7 +22,7 @@ import com.bridgelabz.utility.Utility;
 public class StockReport {
 
 	public static final String filepath="/home/adminsitrator/Documents/JavaProgramming/FunctionalPrograms/src/com/bridgelabz/objectorientedprograms/stockReport.json";
-	static StockPortfolio stock=new StockPortfolio();
+	static Stockportflio stock=new Stockportflio();
 	static long totalOfEachStock;
 	static long totalOfStock;
 	

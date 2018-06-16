@@ -1,4 +1,4 @@
-package com.Bridgelabz.singletonpatterns;
+package com.bridgelabz.creationaldesignpattern.singletonpatterns;
 
 public class StaticBlockSingleton {
 	private static StaticBlockSingleton instance;

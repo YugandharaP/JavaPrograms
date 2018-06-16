@@ -1,4 +1,4 @@
-package com.Bridgelabz.FactoryDesignPatterns;
+package com.bridgelabz.creationaldesignpattern.FactoryDesignPatterns;
 
 public class TestFactory {
 

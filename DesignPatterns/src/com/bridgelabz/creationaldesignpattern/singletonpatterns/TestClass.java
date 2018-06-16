@@ -1,4 +1,4 @@
-package com.Bridgelabz.singletonpatterns;
+package com.bridgelabz.creationaldesignpattern.singletonpatterns;
 
 public class TestClass {
 
@@ -18,8 +18,10 @@ public class TestClass {
 		System.out.println(StaticBlockSingleton.getInstance());*/
 		
 		/*System.out.println(ThreadSafeSingleton.getInstance().hashCode());*/
-		System.out.println(ThreadSafeSingletonUsingSynchronized.getInstance().hashCode());
+		/*System.out.println(ThreadSafeSingletonUsingSynchronized.getInstance().hashCode());*/
 		
+		/*System.out.println(BillPughSingleton.getInstance());*/
+		System.out.println(SerializedSingleton.getInstance());
 	}
 
 }
